@@ -1,0 +1,655 @@
+[32m2020-05-31T07:32:44.483Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:32:44.487Z - info: ✅ Connected to Database : txGenerator[39m
+[32m2020-05-31T07:34:24.575Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:34:24.577Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T07:34:34.412Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:34:34.414Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T07:35:53.271Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 22.672 ms - 169[0m[39m
+[32m[39m
+[31m2020-05-31T07:36:40.473Z - error: command find requires authentication[39m
+[32m2020-05-31T07:36:40.480Z - info: [0mPOST /api/v1/admin/generateClient [31m500[0m 33.508 ms - 566[0m[39m
+[32m[39m
+[32m2020-05-31T07:39:02.959Z - info: ❌ Mongodb Connection Error[39m
+[31m2020-05-31T07:39:02.964Z - error: Authentication failed.[39m
+[32m2020-05-31T07:39:22.337Z - info: ❌ Mongodb Connection Error[39m
+[31m2020-05-31T07:39:22.340Z - error: Authentication failed.[39m
+[32m2020-05-31T07:43:53.390Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:43:53.397Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T07:44:00.760Z - error: Clients validation failed: apiKey: Path `apiKey` is required., name: Path `name` is required.[39m
+[32m2020-05-31T07:44:00.772Z - info: [0mPOST /api/v1/admin/generateClient [31m500[0m 62.412 ms - 1151[0m[39m
+[32m[39m
+[32m2020-05-31T07:45:02.256Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:45:02.259Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T07:45:08.519Z - error: Clients validation failed: apiKey: Path `apiKey` is required., name: Path `name` is required.[39m
+[32m2020-05-31T07:45:08.534Z - info: [0mPOST /api/v1/admin/generateClient [31m500[0m 59.667 ms - 1151[0m[39m
+[32m[39m
+[32m2020-05-31T07:45:52.146Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:45:52.148Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T07:45:56.855Z - error: Clients validation failed: apiKey: Path `apiKey` is required., name: Path `name` is required.[39m
+[32m2020-05-31T07:45:56.862Z - info: [0mPOST /api/v1/admin/generateClient [31m500[0m 44.429 ms - 1151[0m[39m
+[32m[39m
+[32m2020-05-31T07:48:44.329Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:48:44.334Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T07:48:50.672Z - info: [0mPOST /api/v1/admin/generateClient [32m200[0m 75.196 ms - 104[0m[39m
+[32m[39m
+[32m2020-05-31T07:48:54.353Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 6.418 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T07:49:32.059Z - info: [0mGET /api/v1/admin/fetchClientKey [33m404[0m 3.214 ms - 48[0m[39m
+[32m[39m
+[32m2020-05-31T07:49:44.113Z - info: [0mGET /api/v1/admin/fetchClientKey/hi [33m404[0m 0.905 ms - 48[0m[39m
+[32m[39m
+[32m2020-05-31T07:49:57.148Z - info: [0mGET /api/v1/admin/fetchClientKey/hi [33m404[0m 0.724 ms - 48[0m[39m
+[32m[39m
+[32m2020-05-31T07:50:04.897Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:50:04.899Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T07:50:07.056Z - info: [0mGET /api/v1/admin/fetchClientKey/hi [32m200[0m 26.873 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T07:51:07.118Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:51:07.120Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T07:51:10.414Z - info: [0mGET /api/v1/admin/fetchClientKey/hi [33m400[0m 27.102 ms - 49[0m[39m
+[32m[39m
+[32m2020-05-31T07:51:16.500Z - info: [0mGET /api/v1/admin/fetchClientKey/himanshu [32m200[0m 11.653 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T07:51:19.515Z - info: [0mGET /api/v1/admin/fetchClientKey/himanshu [32m200[0m 3.591 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T07:51:21.509Z - info: [0mGET /api/v1/admin/fetchClientKey/himanshu [32m200[0m 2.384 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T07:53:48.907Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:53:48.910Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T07:56:48.164Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:56:48.173Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T07:57:47.617Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:57:47.619Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T07:57:54.384Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 17.593 ms - 160[0m[39m
+[32m[39m
+[32m2020-05-31T07:59:11.021Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 27.733 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T07:59:20.608Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 4.321 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T07:59:26.342Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 2.496 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T07:59:51.193Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T07:59:51.195Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T07:59:52.270Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 26.928 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T08:00:53.398Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 4.854 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T08:01:10.445Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:01:10.447Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T08:01:16.573Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 38.755 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T08:01:40.143Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:01:40.146Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T08:01:45.375Z - info: [0mPOST /api/v1/admin/generateClient [32m200[0m 48.566 ms - 104[0m[39m
+[32m[39m
+[32m2020-05-31T08:01:52.722Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 16.712 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T08:02:50.708Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:02:50.720Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T08:02:57.359Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:02:57.364Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T08:19:02.179Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:19:02.182Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T08:20:47.974Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:20:47.978Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T08:22:25.346Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:22:25.352Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T08:22:35.612Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:22:35.617Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T08:24:22.516Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:24:22.519Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T08:25:11.764Z - info: [0mGET /delivery/checkPincode [33m404[0m 5.837 ms - 48[0m[39m
+[32m[39m
+[32m2020-05-31T08:25:17.120Z - info: [0mGET /delivery/checkPincode/124001 [33m404[0m 1.352 ms - 48[0m[39m
+[32m[39m
+[32m2020-05-31T08:25:22.672Z - info: [0mGET /api/v1/delivery/checkPincode/124001 [33m400[0m 12.498 ms - 45[0m[39m
+[32m[39m
+[32m2020-05-31T08:25:25.760Z - info: [0mGET /api/v1/delivery/checkPincode [33m404[0m 0.794 ms - 48[0m[39m
+[32m[39m
+[32m2020-05-31T08:25:27.833Z - info: [0mGET /api/v1/delivery/checkPincode/ [33m404[0m 1.856 ms - 48[0m[39m
+[32m[39m
+[32m2020-05-31T08:25:30.099Z - info: [0mGET /api/v1/delivery/checkPincode/124001 [33m400[0m 3.035 ms - 45[0m[39m
+[32m[39m
+[32m2020-05-31T08:25:44.017Z - info: [0mGET /api/v1/delivery/checkPincode/124001 [33m400[0m 2.521 ms - 45[0m[39m
+[32m[39m
+[32m2020-05-31T08:26:00.666Z - info: [0mGET /api/v1/admin/fetchClientKey/himanshu [32m200[0m 16.883 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T08:26:15.990Z - info: [0mGET /api/v1/admin/fetchClientKey/himanshu [32m200[0m 4.032 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T08:26:17.492Z - info: [0mGET /api/v1/admin/fetchClientKey/himanshu [32m200[0m 8.293 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T08:26:47.630Z - info: [0mGET /api/v1/admin/fetchClientKey/hunn [33m400[0m 2.668 ms - 49[0m[39m
+[32m[39m
+[32m2020-05-31T08:26:48.813Z - info: [0mGET /api/v1/admin/fetchClientKey/hunny [32m200[0m 2.857 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T08:26:53.760Z - info: [0mGET /api/v1/admin/fetchClientKey/himanshu [32m200[0m 3.100 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T08:27:01.233Z - info: [0mGET /api/v1/admin/fetchClientKey/hunny [32m200[0m 2.557 ms - 64[0m[39m
+[32m[39m
+[32m2020-05-31T08:27:13.880Z - info: [0mGET /api/v1/delivery/checkPincode/124001 [33m400[0m 2.330 ms - 45[0m[39m
+[32m[39m
+[32m2020-05-31T08:27:17.513Z - info: [0mGET /api/v1/delivery/checkPincode/124001 [33m400[0m 1.695 ms - 45[0m[39m
+[32m[39m
+[32m2020-05-31T08:29:03.879Z - info: [0mGET /api/v1/delivery/checkPincode/124001 [32m200[0m 4.467 ms - 46[0m[39m
+[32m[39m
+[32m2020-05-31T08:29:07.265Z - info: [0mGET /api/v1/delivery/checkPincode/124001 [33m400[0m 2.594 ms - 45[0m[39m
+[32m[39m
+[32m2020-05-31T08:29:11.606Z - info: [0mGET /api/v1/delivery/checkPincode/124001 [33m400[0m 1.996 ms - 45[0m[39m
+[32m[39m
+[32m2020-05-31T08:29:14.708Z - info: [0mGET /api/v1/delivery/checkPincode/124001 [32m200[0m 1.772 ms - 46[0m[39m
+[32m[39m
+[32m2020-05-31T08:51:51.422Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T08:51:51.427Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:03:36.640Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:03:36.643Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:03:46.815Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:03:46.822Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:03:48.258Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:03:48.262Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:03:54.998Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:03:55.002Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:04:44.851Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:04:44.854Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:04:48.815Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:04:48.819Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:05:01.586Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:05:01.589Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:05:07.338Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:05:07.343Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:06:19.835Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:06:19.839Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T09:06:19.863Z - error: UNHANDLED REJECTIONIllegal arguments: number, number[39m
+[32m2020-05-31T09:07:11.485Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:07:11.488Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:07:17.019Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:07:17.021Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T09:07:17.035Z - error: UNHANDLED REJECTIONIllegal arguments: number, number[39m
+[32m2020-05-31T09:07:28.865Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:07:28.867Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T09:07:28.880Z - error: UNHANDLED REJECTIONIllegal arguments: number, number[39m
+[32m2020-05-31T09:07:33.956Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:07:33.966Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T09:07:34.118Z - error: UNHANDLED REJECTIONclients is not defined[39m
+[32m2020-05-31T09:07:45.772Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:07:45.781Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:08:06.592Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:08:06.605Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:08:41.234Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:08:41.237Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:09:27.031Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:09:27.035Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:10:40.655Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:10:40.659Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:10:47.020Z - info: [0mPOST /api/v1/admin/login [33m400[0m 16.827 ms - 154[0m[39m
+[32m[39m
+[32m2020-05-31T09:10:55.116Z - info: [0mPOST /api/v1/admin/login [33m400[0m 35.633 ms - 164[0m[39m
+[32m[39m
+[32m2020-05-31T09:11:04.381Z - info: [0mPOST /api/v1/admin/login [33m400[0m 3.343 ms - 163[0m[39m
+[32m[39m
+[31m2020-05-31T09:11:15.966Z - error: UNHANDLED REJECTIONCannot read property 'password' of null[39m
+[32m2020-05-31T09:11:25.151Z - info: [0mPOST /api/v1/admin/login [0m-[0m - ms - -[0m[39m
+[32m[39m
+[32m2020-05-31T09:11:59.297Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:11:59.300Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:12:00.829Z - info: [0mPOST /api/v1/admin/login [33m401[0m 20.749 ms - 55[0m[39m
+[32m[39m
+[32m2020-05-31T09:12:13.321Z - info: [0mPOST /api/v1/admin/login [33m401[0m 174.708 ms - 55[0m[39m
+[32m[39m
+[32m2020-05-31T09:12:22.505Z - info: [0mPOST /api/v1/admin/login [32m200[0m 146.515 ms - 280[0m[39m
+[32m[39m
+[32m2020-05-31T09:12:35.508Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 13.747 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T09:12:41.879Z - info: [0mPOST /api/v1/admin/generateClient [32m200[0m 64.574 ms - 104[0m[39m
+[32m[39m
+[32m2020-05-31T09:13:18.668Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:13:18.673Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:13:21.139Z - info: [0mPOST /api/v1/admin/generateClient [33m401[0m 3.192 ms - 51[0m[39m
+[32m[39m
+[32m2020-05-31T09:13:27.110Z - info: [0mPOST /api/v1/admin/generateClient [33m401[0m 0.377 ms - 51[0m[39m
+[32m[39m
+[32m2020-05-31T09:13:40.868Z - info: [0mPOST /api/v1/admin/generateClient [32m200[0m 86.652 ms - 104[0m[39m
+[32m[39m
+[31m2020-05-31T09:13:45.719Z - error: UNHANDLED REJECTIONinvalid token[39m
+[32m2020-05-31T09:13:58.899Z - info: [0mPOST /api/v1/admin/generateClient [0m-[0m - ms - -[0m[39m
+[32m[39m
+[32m2020-05-31T09:14:25.459Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:14:25.469Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:14:39.560Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:14:39.563Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:14:41.782Z - info: [0mPOST /api/v1/admin/generateClient [33m401[0m 6.934 ms - 51[0m[39m
+[32m[39m
+[32m2020-05-31T09:14:47.615Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 59.961 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T09:14:53.641Z - info: [0mPOST /api/v1/admin/generateClient [33m401[0m 0.460 ms - 51[0m[39m
+[32m[39m
+[32m2020-05-31T09:14:56.455Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 4.798 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T09:15:03.411Z - info: [0mPOST /api/v1/admin/generateClient [33m401[0m 0.316 ms - 51[0m[39m
+[32m[39m
+[32m2020-05-31T09:15:15.987Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 4.402 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T09:15:34.949Z - info: [0mPOST /api/v1/admin/generateClient [33m401[0m 0.893 ms - 51[0m[39m
+[32m[39m
+[32m2020-05-31T09:15:52.143Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 9.562 ms - 66[0m[39m
+[32m[39m
+[32m2020-05-31T09:19:20.989Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:19:20.993Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:40:50.871Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:40:50.873Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:41:09.088Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:41:09.094Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T09:42:03.255Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T09:42:03.259Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:25:32.961Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:25:32.963Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:25:39.355Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001 [32m200[0m 829.000 ms - 305[0m[39m
+[32m[39m
+[32m2020-05-31T10:25:46.946Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=12400 [32m200[0m 645.329 ms - 75[0m[39m
+[32m[39m
+[32m2020-05-31T10:25:50.009Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001 [32m200[0m 548.193 ms - 305[0m[39m
+[32m[39m
+[32m2020-05-31T10:26:54.229Z - info: [0mGET /api/v1/delivery/checkPincode [32m200[0m 983.365 ms - 75[0m[39m
+[32m[39m
+[32m2020-05-31T10:27:46.992Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:27:46.994Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T10:27:49.054Z - error: Cannot read property 'length' of undefined[39m
+[32m2020-05-31T10:27:49.062Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001 [31m500[0m 843.564 ms - 306[0m[39m
+[32m[39m
+[32m2020-05-31T10:28:21.975Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:28:21.978Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:28:24.310Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001 [32m200[0m 876.375 ms - 305[0m[39m
+[32m[39m
+[32m2020-05-31T10:28:35.873Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:28:35.877Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:28:40.648Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001 [32m200[0m 786.747 ms - 318[0m[39m
+[32m[39m
+[32m2020-05-31T10:28:44.406Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=12400 [32m200[0m 613.236 ms - 93[0m[39m
+[32m[39m
+[32m2020-05-31T10:28:48.179Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001 [32m200[0m 559.203 ms - 318[0m[39m
+[32m[39m
+[32m2020-05-31T10:30:13.145Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:30:13.149Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:31:45.024Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:31:45.027Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:31:55.497Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:31:55.499Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:32:08.449Z - info: [0mGET /api/v1/admin/generateWayBill [33m404[0m 7.700 ms - 48[0m[39m
+[32m[39m
+[32m2020-05-31T10:32:27.863Z - info: [0mGET /api/v1/delivery/generateWayBill [33m400[0m 4.596 ms - 45[0m[39m
+[32m[39m
+[32m2020-05-31T10:33:01.500Z - info: [0mGET /api/v1/delivery/generateWayBill [32m200[0m 942.209 ms - 39[0m[39m
+[32m[39m
+[32m2020-05-31T10:33:37.053Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:33:37.055Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:39:14.591Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:39:14.594Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:40:26.299Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:40:26.307Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:41:28.577Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:41:28.580Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:42:16.456Z - info: [0mGET /api/v1/delivery/trackOrder/2891829 [32m200[0m 652.674 ms - 69[0m[39m
+[32m[39m
+[32m2020-05-31T10:43:03.900Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:43:03.903Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:43:06.332Z - info: [0mGET /api/v1/delivery/trackOrder/2891829 [33m400[0m 929.697 ms - 63[0m[39m
+[32m[39m
+[32m2020-05-31T10:49:13.187Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T10:49:13.190Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T10:49:25.568Z - info: [0mGET /api/v1/delivery/generateWayBill [32m200[0m 676.321 ms - 39[0m[39m
+[32m[39m
+[32m2020-05-31T10:49:32.075Z - info: [0mGET /api/v1/delivery/generateWayBill [32m200[0m 708.922 ms - 39[0m[39m
+[32m[39m
+[32m2020-05-31T10:49:34.803Z - info: [0mGET /api/v1/delivery/generateWayBill [32m200[0m 460.090 ms - 39[0m[39m
+[32m[39m
+[32m2020-05-31T11:12:53.872Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:12:53.877Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:15:05.266Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:15:05.268Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:16:08.686Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:16:08.689Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:16:10.627Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:16:10.629Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:16:40.683Z - info: [0mGET /api/v1/delivery/generatePackingSlip [33m404[0m 8.907 ms - 48[0m[39m
+[32m[39m
+[31m2020-05-31T11:16:51.449Z - error: 401 - {"detail":"Authentication credentials were not provided."}[39m
+[32m2020-05-31T11:16:51.458Z - info: [0mGET /api/v1/delivery/generatePackingSlip/ssl [31m500[0m 732.871 ms - 1264[0m[39m
+[32m[39m
+[32m2020-05-31T11:17:32.558Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:17:32.561Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T11:17:34.244Z - error: 401 - {"detail":"Authentication credentials were not provided."}[39m
+[32m2020-05-31T11:17:34.256Z - info: [0mGET /api/v1/delivery/generatePackingSlip/ssl [31m500[0m 684.199 ms - 1264[0m[39m
+[32m[39m
+[32m2020-05-31T11:18:30.616Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:18:30.621Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T11:18:38.367Z - error: 401 - {"detail":"Authentication credentials were not provided."}[39m
+[32m2020-05-31T11:18:38.383Z - info: [0mGET /api/v1/delivery/generatePackingSlip/ssl [31m500[0m 729.662 ms - 1264[0m[39m
+[32m[39m
+[32m2020-05-31T11:19:15.743Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:19:15.746Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T11:19:36.793Z - error: 401 - {"detail":"Authentication credentials were not provided."}[39m
+[32m2020-05-31T11:19:36.818Z - info: [0mGET /api/v1/delivery/generatePackingSlip/ssl [31m500[0m 646.017 ms - 1264[0m[39m
+[32m[39m
+[32m2020-05-31T11:20:02.360Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:20:02.363Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:20:13.182Z - info: [0mGET /api/v1/delivery/generatePackingSlip/ssl [33m400[0m 692.881 ms - 71[0m[39m
+[32m[39m
+[32m2020-05-31T11:20:28.258Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010005250 [32m200[0m 744.585 ms - 8468[0m[39m
+[32m[39m
+[32m2020-05-31T11:31:37.083Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:31:37.086Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:33:19.963Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:33:19.966Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:33:25.515Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:33:25.519Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:34:19.875Z - info: [0mPOST /api/v1/delivery/generateOrder [33m404[0m 4.913 ms - 48[0m[39m
+[32m[39m
+[32m2020-05-31T11:34:38.248Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 967.630 ms - 266[0m[39m
+[32m[39m
+[32m2020-05-31T11:35:56.581Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:35:56.584Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:36:00.055Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1003.699 ms - 270[0m[39m
+[32m[39m
+[32m2020-05-31T11:36:10.143Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:36:10.146Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:36:14.889Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 906.128 ms - 56[0m[39m
+[32m[39m
+[32m2020-05-31T11:36:36.531Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:36:36.536Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:36:45.097Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 984.921 ms - 56[0m[39m
+[32m[39m
+[32m2020-05-31T11:37:29.896Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:37:29.901Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:37:40.350Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:37:40.352Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:37:43.869Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1220.485 ms - 56[0m[39m
+[32m[39m
+[32m2020-05-31T11:42:08.827Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:42:08.830Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:42:13.187Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:42:13.190Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:42:27.490Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1059.594 ms - 56[0m[39m
+[32m[39m
+[32m2020-05-31T11:46:23.687Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:46:23.690Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:46:59.593Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 855.444 ms - 56[0m[39m
+[32m[39m
+[32m2020-05-31T11:48:37.605Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:48:37.608Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:48:53.566Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 816.972 ms - 319[0m[39m
+[32m[39m
+[32m2020-05-31T11:49:26.487Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:49:26.490Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:49:29.946Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 782.963 ms - 56[0m[39m
+[32m[39m
+[32m2020-05-31T11:49:45.234Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:49:45.236Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:49:52.650Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 896.775 ms - 319[0m[39m
+[32m[39m
+[32m2020-05-31T11:50:00.586Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:50:00.589Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:50:03.565Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 927.237 ms - 636[0m[39m
+[32m[39m
+[32m2020-05-31T11:50:57.844Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:50:57.848Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:51:00.812Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 959.125 ms - 635[0m[39m
+[32m[39m
+[32m2020-05-31T11:51:08.710Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:51:08.712Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:51:13.591Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1588.938 ms - 56[0m[39m
+[32m[39m
+[32m2020-05-31T11:51:20.351Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:51:20.356Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:51:46.805Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:51:46.807Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:51:54.647Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 989.639 ms - 635[0m[39m
+[32m[39m
+[32m2020-05-31T11:59:09.129Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:59:09.132Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:59:22.405Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 10028.518 ms - 636[0m[39m
+[32m[39m
+[32m2020-05-31T11:59:48.771Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 14438.859 ms - 635[0m[39m
+[32m[39m
+[32m2020-05-31T11:59:56.541Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T11:59:56.543Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T11:59:59.478Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1590.991 ms - 636[0m[39m
+[32m[39m
+[32m2020-05-31T12:00:42.903Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:00:42.907Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T12:00:48.788Z - error: Unexpected token o in JSON at position 1[39m
+[32m2020-05-31T12:00:48.809Z - info: [0mPOST /api/v1/delivery/createOrder [31m500[0m 1916.962 ms - 339[0m[39m
+[32m[39m
+[32m2020-05-31T12:01:06.105Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:01:06.110Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:01:10.679Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1475.362 ms - 115[0m[39m
+[32m[39m
+[32m2020-05-31T12:03:25.259Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:03:25.262Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:03:32.552Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1529.000 ms - 49[0m[39m
+[32m[39m
+[32m2020-05-31T12:12:07.784Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:12:07.788Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:12:14.541Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:12:14.543Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:12:55.045Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:12:55.048Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:13:02.726Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 11.090 ms - 151[0m[39m
+[32m[39m
+[32m2020-05-31T12:14:29.584Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 6.497 ms - 211[0m[39m
+[32m[39m
+[32m2020-05-31T12:14:54.906Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 5.407 ms - 160[0m[39m
+[32m[39m
+[32m2020-05-31T12:15:03.199Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 3.667 ms - 160[0m[39m
+[32m[39m
+[32m2020-05-31T12:15:27.217Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 4.586 ms - 172[0m[39m
+[32m[39m
+[32m2020-05-31T12:15:32.692Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 10.142 ms - 193[0m[39m
+[32m[39m
+[32m2020-05-31T12:15:48.147Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 10.083 ms - 163[0m[39m
+[32m[39m
+[32m2020-05-31T12:16:24.542Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:16:24.545Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:16:27.063Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:16:27.067Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:16:29.963Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 12.782 ms - 125[0m[39m
+[32m[39m
+[32m2020-05-31T12:16:38.970Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1257.634 ms - 107[0m[39m
+[32m[39m
+[32m2020-05-31T12:18:55.994Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:18:55.996Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:18:59.871Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1216.708 ms - 107[0m[39m
+[32m[39m
+[32m2020-05-31T12:21:15.569Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:21:15.572Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:21:18.374Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1169.871 ms - 83[0m[39m
+[32m[39m
+[32m2020-05-31T12:21:28.120Z - info: [0mGET /api/v1/delivery/generateWayBill [32m200[0m 833.118 ms - 39[0m[39m
+[32m[39m
+[32m2020-05-31T12:21:39.351Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1854.304 ms - 32[0m[39m
+[32m[39m
+[32m2020-05-31T12:23:47.413Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 2038.803 ms - 49[0m[39m
+[32m[39m
+[32m2020-05-31T12:24:31.263Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:24:31.266Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:24:44.248Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 1944.844 ms - 49[0m[39m
+[32m[39m
+[32m2020-05-31T12:24:51.723Z - info: [0mGET /api/v1/delivery/generateWayBill [32m200[0m 4728.040 ms - 39[0m[39m
+[32m[39m
+[32m2020-05-31T12:25:04.383Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 2206.456 ms - 421[0m[39m
+[32m[39m
+[32m2020-05-31T12:25:25.354Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010005272 [32m200[0m 2143.031 ms - 8396[0m[39m
+[32m[39m
+[32m2020-05-31T12:28:08.857Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:28:08.861Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:36:21.077Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:36:21.079Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:37:34.465Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:37:34.468Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T12:38:15.542Z - error: TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters[39m
+[32m2020-05-31T12:38:15.552Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [31m500[0m 33.563 ms - 1327[0m[39m
+[32m[39m
+[31m2020-05-31T12:38:29.951Z - error: TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters[39m
+[32m2020-05-31T12:38:29.955Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [31m500[0m 7.614 ms - 1327[0m[39m
+[32m[39m
+[31m2020-05-31T12:39:29.904Z - error: TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters[39m
+[32m2020-05-31T12:39:29.907Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [31m500[0m 6.191 ms - 1327[0m[39m
+[32m[39m
+[32m2020-05-31T12:39:58.356Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:39:58.359Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T12:40:02.801Z - error: TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters[39m
+[32m2020-05-31T12:40:02.809Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [31m500[0m 22.610 ms - 1327[0m[39m
+[32m[39m
+[31m2020-05-31T12:40:22.018Z - error: TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters[39m
+[32m2020-05-31T12:40:22.022Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [31m500[0m 26.052 ms - 1327[0m[39m
+[32m[39m
+[32m2020-05-31T12:40:52.303Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:40:52.305Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T12:40:54.491Z - error: TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters[39m
+[32m2020-05-31T12:40:54.504Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [31m500[0m 32.245 ms - 1327[0m[39m
+[32m[39m
+[32m2020-05-31T12:41:13.815Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:41:13.819Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:41:15.509Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [32m200[0m 10.969 ms - 29[0m[39m
+[32m[39m
+[32m2020-05-31T12:42:10.872Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:42:10.875Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T12:42:13.063Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T12:42:13.066Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T12:42:15.654Z - error: TypeError [ERR_UNESCAPED_CHARACTERS]: Request path contains unescaped characters[39m
+[32m2020-05-31T12:42:15.682Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [31m500[0m 23.295 ms - 1327[0m[39m
+[32m[39m
+[32m2020-05-31T13:16:51.176Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:16:51.179Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:26:51.323Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:26:51.325Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:28:57.514Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:28:57.518Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:31:14.404Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:31:14.409Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:31:16.176Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:31:16.180Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:37:04.924Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:37:04.927Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:37:14.534Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:37:14.536Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:37:30.006Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:37:30.009Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:37:31.758Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:37:31.760Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:40:59.817Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:40:59.819Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:41:14.468Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:41:14.470Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:42:09.347Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:42:09.351Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:46:47.591Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:46:47.595Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:46:49.257Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:46:49.260Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T13:49:34.988Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T13:49:34.990Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:13:09.447Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:13:09.454Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T14:13:51.220Z - error: dao is not defined[39m
+[32m2020-05-31T14:13:51.235Z - info: [0mGET /api/v1/delivery/cancelOrder/289182 [31m500[0m 25.743 ms - 678[0m[39m
+[32m[39m
+[32m2020-05-31T14:14:30.424Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:14:30.426Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:14:35.389Z - info: [0mGET /api/v1/delivery/cancelOrder/289182 [32m200[0m 23.457 ms - 45[0m[39m
+[32m[39m
+[32m2020-05-31T14:14:59.115Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:14:59.119Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:15:04.800Z - info: [0mGET /api/v1/delivery/cancelOrder/289182 [32m200[0m 26.344 ms - 46[0m[39m
+[32m[39m
+[32m2020-05-31T14:17:11.815Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005272 [32m200[0m 12.658 ms - 46[0m[39m
+[32m[39m
+[32m2020-05-31T14:17:43.437Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:17:43.441Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:18:15.615Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:18:15.617Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:18:27.533Z - info: [0mGET /api/v1/delivery/generateWayBill [32m200[0m 1185.755 ms - 39[0m[39m
+[32m[39m
+[32m2020-05-31T14:18:39.900Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1178.731 ms - 423[0m[39m
+[32m[39m
+[32m2020-05-31T14:18:46.431Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005283 [32m200[0m 610.772 ms - 132[0m[39m
+[32m[39m
+[32m2020-05-31T14:19:07.861Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005283 [32m200[0m 661.681 ms - 132[0m[39m
+[32m[39m
+[32m2020-05-31T14:19:10.587Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005283 [32m200[0m 786.478 ms - 132[0m[39m
+[32m[39m
+[32m2020-05-31T14:19:12.213Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005283 [32m200[0m 602.698 ms - 132[0m[39m
+[32m[39m
+[32m2020-05-31T14:19:16.130Z - info: [0mGET /api/v1/delivery/cancelOrder/463101000528 [32m200[0m 6.301 ms - 46[0m[39m
+[32m[39m
+[32m2020-05-31T14:19:19.990Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005283 [32m200[0m 929.972 ms - 132[0m[39m
+[32m[39m
+[32m2020-05-31T14:21:03.618Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:21:03.622Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:21:07.579Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005283 [32m200[0m 965.958 ms - 57[0m[39m
+[32m[39m
+[32m2020-05-31T14:24:45.833Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:24:45.838Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:24:49.922Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:24:49.927Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:25:16.192Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:25:16.196Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:27:26.695Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:27:26.698Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-05-31T14:28:00.698Z - error: orders is not defined[39m
+[32m2020-05-31T14:28:00.720Z - info: [0mGET /api/v1/delivery/getOrders [31m500[0m 24.827 ms - 682[0m[39m
+[32m[39m
+[32m2020-05-31T14:28:49.006Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:28:49.009Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:28:52.351Z - info: [0mGET /api/v1/delivery/getOrders [32m200[0m 18.631 ms - 531[0m[39m
+[32m[39m
+[31m2020-05-31T14:29:53.506Z - error: pickups is not defined[39m
+[32m2020-05-31T14:29:53.537Z - info: [0mGET /api/v1/delivery/getPickups [31m500[0m 13.739 ms - 685[0m[39m
+[32m[39m
+[32m2020-05-31T14:30:07.885Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:30:07.889Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:30:08.943Z - info: [0mGET /api/v1/delivery/getPickups [32m200[0m 21.383 ms - 26[0m[39m
+[32m[39m
+[32m2020-05-31T14:30:21.667Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [33m400[0m 8.797 ms - 169[0m[39m
+[32m[39m
+[32m2020-05-31T14:30:58.942Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [33m400[0m 7.513 ms - 199[0m[39m
+[32m[39m
+[31m2020-05-31T14:31:07.024Z - error: Pickups validation failed: clientId: Path `clientId` is required., status: Path `status` is required.[39m
+[32m2020-05-31T14:31:07.039Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [31m500[0m 40.741 ms - 1167[0m[39m
+[32m[39m
+[32m2020-05-31T14:31:47.650Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:31:47.652Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:31:51.033Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [32m200[0m 67.239 ms - 67[0m[39m
+[32m[39m
+[32m2020-05-31T14:31:55.082Z - info: [0mGET /api/v1/delivery/getPickups [32m200[0m 11.759 ms - 263[0m[39m
+[32m[39m
+[32m2020-05-31T14:32:07.722Z - info: [0mPOST /api/v1/admin/generateClient [32m200[0m 33.969 ms - 104[0m[39m
+[32m[39m
+[32m2020-05-31T14:32:21.563Z - info: [0mGET /api/v1/delivery/getPickups [32m200[0m 8.790 ms - 26[0m[39m
+[32m[39m
+[32m2020-05-31T14:32:24.956Z - info: [0mGET /api/v1/delivery/getPickups [32m200[0m 6.993 ms - 263[0m[39m
+[32m[39m
+[32m2020-05-31T14:32:47.544Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:32:47.547Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:34:58.272Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:34:58.274Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:36:43.898Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:36:43.902Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:36:52.263Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:36:52.267Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:37:22.214Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:37:22.217Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:37:46.209Z - info: [0mPOST /api/v1/admin/updatePickupRequest [33m401[0m 4.425 ms - 51[0m[39m
+[32m[39m
+[32m2020-05-31T14:38:04.733Z - info: [0mPOST /api/v1/admin/updatePickupRequest [33m400[0m 29.798 ms - 163[0m[39m
+[32m[39m
+[32m2020-05-31T14:38:28.936Z - info: [0mPOST /api/v1/admin/updatePickupRequest [33m400[0m 33.927 ms - 173[0m[39m
+[32m[39m
+[32m2020-05-31T14:38:43.360Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:38:43.363Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-05-31T14:38:44.733Z - info: [0mPOST /api/v1/admin/updatePickupRequest [33m400[0m 29.926 ms - 265[0m[39m
+[32m[39m
+[32m2020-05-31T14:38:55.587Z - info: [0mPOST /api/v1/admin/updatePickupRequest [32m200[0m 38.046 ms - 71[0m[39m
+[32m[39m
+[32m2020-05-31T14:38:59.610Z - info: [0mGET /api/v1/delivery/getPickups [32m200[0m 20.445 ms - 264[0m[39m
+[32m[39m
+[32m2020-05-31T14:42:02.110Z - info: ✅ Mongodb Connected[39m
+[32m2020-05-31T14:42:02.113Z - info: ✅ Connected to Database : logistics[39m

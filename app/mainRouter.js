@@ -45,6 +45,7 @@ if(env === 'staging' || env === 'development' || env === 'production'){
 
 
 controllers.forEach((controller) => {
-  require(controller)(router); 
+  let controllerFunction = require(controller);
+  controllerFunction(router) 
 });
 module.exports = router;

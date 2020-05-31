@@ -7,32 +7,32 @@ const config = {
   development: {
     root: rootPath,
     app: {
-      name: "txGenerator",
+      name: "logistics",
       domain: "http://localhost:8030",
       webApi: "v1"
     },
     port: process.env.PORT || 3000,
-    db: "mongodb://localhost:27017/txGenerator"
+    db: "mongodb://himanshu:himanshu@localhost:27017/logistics"
   },
   staging: {
     root: rootPath,
     app: {
-      name: "txGenerator",
+      name: "logistics",
       domain: "http://localhost:8030",
       webApi: "v1"
     },
     port: process.env.PORT || 3000,
-    db: "mongodb://localhost:27017/txGenerator"
+    db:  "mongodb://himanshu:himanshu@localhost:27017/logistics"
   },
   production: {
     root: rootPath,
     app: {
-      name: "txGenerator",
+      name: "logistics",
       domain: "http://localhost:8030",
       webApi: "v1"
     },
     port: process.env.PORT || 3000,
-    db: "mongodb://localhost:27017/txGenerator"
+    db:  "mongodb://localhost:27017/logistics"
   }
 };
 
