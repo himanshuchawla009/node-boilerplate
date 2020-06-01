@@ -225,40 +225,38 @@ const findPincodeGroup = async (pincode) => {
 const estimateLocalGroupCharge = async (weight) => {
     try {
         let charge = 0;
-       
-        if (weight <= 1000) {
-            weight = weight /1000
+        weight = weight /1000
+
+        if (weight <= 1) {
             charge = charge + 42;
 
 
-        } else if (weight <= 5000) {
-            weight = weight /1000
+        } else if (weight <= 5) {
             charge = charge + 42;
             charge = charge + (weight - 1) * 22.50;
 
-        } else if (weight <= 10000) {
-            weight = weight /1000
+        } else if (weight <= 10) {
             charge = charge + 42;
             charge = charge + (weight - 1) * 15;
-        } else if (weight <= 25000) {
+        } else if (weight <= 25) {
             charge = charge + 42;
             charge = charge + (4 * 22.50);
             weight = weight - 5;
             charge = charge + (weight) * 15;
 
 
-        } else if (weight <= 50000) {
+        } else if (weight <= 50) {
             charge = charge + 42;
             charge = charge + (4 * 22.50);
             weight = weight - 5;
             charge = charge + (weight) * 15;
 
-        } else if (weight <= 100000) {
+        } else if (weight <= 100) {
             charge = charge + 42;
             charge = charge + (4 * 22.50);
             weight = weight - 5;
             charge = charge + (weight) * 15;
-        } else if (weight >= 100000) {
+        } else if (weight >= 100) {
             charge = charge + 42;
             charge = charge + (4 * 22.50);
             weight = weight - 5;
