@@ -225,17 +225,19 @@ const findPincodeGroup = async (pincode) => {
 const estimateLocalGroupCharge = async (weight) => {
     try {
         let charge = 0;
-        weight = weight /1000
+       
         if (weight <= 1000) {
+            weight = weight /1000
             charge = charge + 42;
 
 
         } else if (weight <= 5000) {
-           
+            weight = weight /1000
             charge = charge + 42;
             charge = charge + (weight - 1) * 22.50;
 
         } else if (weight <= 10000) {
+            weight = weight /1000
             charge = charge + 42;
             charge = charge + (weight - 1) * 15;
         } else if (weight <= 25000) {
@@ -279,35 +281,35 @@ const estimateNorthGroupCharge = async (weight) => {
         let charge;
         weight = weight /1000
 
-        if (weight <= 1000) {
+        if (weight <= 1) {
             charge = charge + 42;
 
 
-        } else if (weight <= 5000) {
+        } else if (weight <= 5) {
             charge = charge + 42;
             charge = charge + (weight - 1) * 36;
 
-        } else if (weight <= 10000) {
+        } else if (weight <= 10) {
             charge = charge + 42;
             charge = charge + (weight - 1) * 31.50;
-        } else if (weight <= 25000) {
+        } else if (weight <= 25) {
             charge = charge + 42;
             charge = charge + (4 * 36);
             weight = weight - 5;
             charge = charge + (weight) * 31.50;
 
-        } else if (weight <= 50000) {
+        } else if (weight <= 50) {
             charge = charge + 42;
             charge = charge + (4 * 36);
             weight = weight - 5;
             charge = charge + (weight) * 31.50;
 
-        } else if (weight <= 100000) {
+        } else if (weight <= 100) {
             charge = charge + 42;
             charge = charge + (4 * 36);
             weight = weight - 5;
             charge = charge + (weight) * 31.50;
-        } else if (weight >= 100000) {
+        } else if (weight >= 100) {
             charge = charge + 42;
             charge = charge + (4 * 36);
             weight = weight - 5;
@@ -326,33 +328,33 @@ const estimateMetroGroupCharge = async (weight) => {
         let charge;
         weight = weight /1000
 
-        if (weight <= 1000) {
+        if (weight <= 1) {
             charge = charge + 60;
 
-        } else if (weight <= 5000) {
+        } else if (weight <= 5) {
             charge = charge + 60;
             charge = charge + (weight - 1) * 49.50;
 
-        } else if (weight <= 10000) {
+        } else if (weight <= 10) {
             charge = charge + 60;
             charge = charge + (weight - 1) * 45;
-        } else if (weight <= 25000) {
+        } else if (weight <= 25) {
             charge = charge + 60;
             charge = charge + (4 * 49.50);
             weight = weight - 5;
             charge = charge + (weight) * 45;
 
-        } else if (weight <= 50000) {
+        } else if (weight <= 50) {
             charge = charge + 60;
             charge = charge + (4 * 49.50);
             weight = weight - 5;
             charge = charge + (weight) * 45;
-        } else if (weight <= 100000) {
+        } else if (weight <= 100) {
             charge = charge + 60;
             charge = charge + (4 * 49.50);
             weight = weight - 5;
             charge = charge + (weight) * 45;
-        } else if (weight >= 100000) {
+        } else if (weight >= 100) {
             charge = charge + 60;
             charge = charge + (4 * 49.50);
             weight = weight - 5;
@@ -369,8 +371,9 @@ const estimateMetroGroupCharge = async (weight) => {
 const estimateRoiGroupCharge = async (weight) => {
     try {
         let charge;
-
+        weight = weight /1000
         if (weight <= 1) {
+            
             charge = charge + 75;
 
         } else if (weight <= 5) {

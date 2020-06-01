@@ -162,3 +162,23 @@
 [32m2020-06-01T07:01:43.105Z - info: ✅ Mongodb Connected[39m
 [32m2020-06-01T07:01:43.108Z - info: ✅ Connected to Database : logistics[39m
 [31m2020-06-01T07:01:43.116Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-01T07:19:01.978Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T07:19:01.981Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T07:19:01.988Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-01T07:19:13.002Z - info: [0mPOST /api/v1/rate/calculate [33m400[0m 10.479 ms - 45[0m[39m
+[32m[39m
+[32m2020-06-01T07:19:20.254Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 22.714 ms - 79[0m[39m
+[32m[39m
+[32m2020-06-01T07:19:55.103Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T07:19:55.108Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T07:19:55.117Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-01T07:20:01.160Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T07:20:01.162Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T07:20:01.171Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-01T07:20:04.337Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 26.183 ms - 81[0m[39m
+[32m[39m
+[32m2020-06-01T07:22:05.831Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T07:22:05.833Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T07:22:05.840Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-01T07:22:08.898Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 39.677 ms - 81[0m[39m
+[32m[39m
