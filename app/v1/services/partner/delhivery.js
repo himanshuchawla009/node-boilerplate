@@ -77,7 +77,8 @@ class Delivery {
                         "quantity": "${orderDetails.quantity}",
                         "payment_mode": "${orderDetails.payment_mode}",
                         "state": "${orderDetails.state}",
-                        "city": "${orderDetails.city}"
+                        "city": "${orderDetails.city}",
+                        "weight":"${orderDetails.weight}"
                     }]
                 }`
 

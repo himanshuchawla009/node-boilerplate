@@ -17,6 +17,7 @@ module.exports = {
             productDescription: Joi.string().required(),
             cod_amount: Joi.number().required(),
             total_amount: Joi.number().required(),
+            weight: Joi.number().required(),
             quantity: Joi.number().required(),
            
         })

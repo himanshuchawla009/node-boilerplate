@@ -67,6 +67,10 @@ var orderSchema = new Schema({
   "clientId": {
     type: String,
     required: true
+  },
+  "weight": {
+    type: Number,
+    required: true
   }
 }, {
   timestamps: {
@@ -74,6 +78,7 @@ var orderSchema = new Schema({
     updatedAt: 'updated_at'
   }
 });
+
 
 
 

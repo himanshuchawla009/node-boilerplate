@@ -1,0 +1,164 @@
+[32m2020-06-01T04:47:15.112Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T04:47:15.115Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:02:01.576Z - error: Pincode is not servicable[39m
+[32m2020-06-01T05:02:01.583Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 11.988 ms - 332[0m[39m
+[32m[39m
+[32m2020-06-01T05:02:43.620Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:02:43.622Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:02:46.445Z - error: Pincode is not servicable[39m
+[32m2020-06-01T05:02:46.455Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 27.092 ms - 332[0m[39m
+[32m[39m
+[32m2020-06-01T05:03:03.424Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:03:03.426Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:03:06.818Z - error: Pincode is not servicable[39m
+[32m2020-06-01T05:03:06.826Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 10.362 ms - 332[0m[39m
+[32m[39m
+[32m2020-06-01T05:03:31.032Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:03:31.034Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:03:32.371Z - error: Callback must be a function[39m
+[32m2020-06-01T05:03:32.378Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 11.037 ms - 1036[0m[39m
+[32m[39m
+[32m2020-06-01T05:05:25.471Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:05:25.473Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:05:29.199Z - error: FileReaderSync is not defined[39m
+[32m2020-06-01T05:05:29.208Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 14.540 ms - 571[0m[39m
+[32m[39m
+[32m2020-06-01T05:06:03.891Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:06:03.894Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:06:04.988Z - error: FileReaderSync is not defined[39m
+[32m2020-06-01T05:06:04.996Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 13.892 ms - 571[0m[39m
+[32m[39m
+[32m2020-06-01T05:06:20.551Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:06:20.555Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:06:23.477Z - error: FileReaderSync is not defined[39m
+[32m2020-06-01T05:06:23.495Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 43.238 ms - 571[0m[39m
+[32m[39m
+[32m2020-06-01T05:06:37.607Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:06:37.610Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:06:42.645Z - error: Cannot read property 'Rate group' of undefined[39m
+[32m2020-06-01T05:06:42.657Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 38.563 ms - 365[0m[39m
+[32m[39m
+[32m2020-06-01T05:06:52.130Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:06:52.132Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:07:07.254Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:07:07.256Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:07:08.315Z - error: csvData.filter is not a function[39m
+[32m2020-06-01T05:07:08.323Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 20.242 ms - 337[0m[39m
+[32m[39m
+[32m2020-06-01T05:09:46.341Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:09:46.343Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:09:54.229Z - error: csvData.filter is not a function[39m
+[32m2020-06-01T05:09:54.236Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 38.431 ms - 337[0m[39m
+[32m[39m
+[32m2020-06-01T05:10:23.285Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:10:23.287Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:10:26.399Z - error: Cannot read property 'Rate group' of undefined[39m
+[32m2020-06-01T05:10:26.406Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 29.751 ms - 365[0m[39m
+[32m[39m
+[32m2020-06-01T05:11:06.118Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:11:06.121Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:11:11.613Z - error: Pincode is not servicable[39m
+[32m2020-06-01T05:11:11.620Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 35.237 ms - 332[0m[39m
+[32m[39m
+[32m2020-06-01T05:11:35.911Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:11:35.915Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:11:39.326Z - error: Pincode is not servicable[39m
+[32m2020-06-01T05:11:39.334Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 35.939 ms - 332[0m[39m
+[32m[39m
+[32m2020-06-01T05:11:48.070Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:11:48.072Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:11:49.421Z - error: Pincode is not servicable[39m
+[32m2020-06-01T05:11:49.427Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 27.495 ms - 332[0m[39m
+[32m[39m
+[32m2020-06-01T05:12:35.199Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:12:35.202Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:12:40.139Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:12:40.141Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:12:42.590Z - error: Pincode is not servicable[39m
+[32m2020-06-01T05:12:42.598Z - info: [0mPOST /api/v1/rate/calculate [31m500[0m 30.959 ms - 332[0m[39m
+[32m[39m
+[32m2020-06-01T05:13:13.000Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:13:13.002Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:13:35.535Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:13:35.538Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:13:47.913Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:13:47.915Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:13:50.173Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 21.240 ms - 60[0m[39m
+[32m[39m
+[32m2020-06-01T05:14:44.137Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:14:44.140Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:14:46.030Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 41.439 ms - 60[0m[39m
+[32m[39m
+[32m2020-06-01T05:15:21.030Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:15:21.033Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:15:24.578Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 30.838 ms - 60[0m[39m
+[32m[39m
+[32m2020-06-01T05:15:38.211Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:15:38.213Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:15:40.275Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 28.483 ms - 60[0m[39m
+[32m[39m
+[32m2020-06-01T05:16:10.222Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:16:10.224Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:16:10.616Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 35.521 ms - 60[0m[39m
+[32m[39m
+[32m2020-06-01T05:16:44.068Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:16:44.070Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:16:46.003Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 27.858 ms - 81[0m[39m
+[32m[39m
+[32m2020-06-01T05:18:41.619Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:18:41.624Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:19:22.452Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:19:22.454Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:20:32.228Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:20:32.230Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:24:37.300Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:24:37.304Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:24:40.121Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:24:40.123Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:26:39.707Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:26:39.711Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:26:53.399Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:26:53.402Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:28:02.184Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:28:02.187Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:29:13.753Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:29:13.755Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:33:27.547Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:33:27.550Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-01T05:33:51.109Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 14.561 ms - 157[0m[39m
+[32m[39m
+[32m2020-06-01T05:34:15.686Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 985.058 ms - 49[0m[39m
+[32m[39m
+[32m2020-06-01T05:34:28.265Z - info: [0mGET /api/v1/delivery/generateWayBill [32m200[0m 894.980 ms - 39[0m[39m
+[32m[39m
+[32m2020-06-01T05:34:43.628Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 951.089 ms - 423[0m[39m
+[32m[39m
+[32m2020-06-01T05:35:00.211Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005283 [32m200[0m 981.091 ms - 57[0m[39m
+[32m[39m
+[32m2020-06-01T05:35:02.608Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005294 [32m200[0m 587.568 ms - 57[0m[39m
+[32m[39m
+[32m2020-06-01T05:35:05.304Z - info: [0mGET /api/v1/delivery/cancelOrder/463101000529 [32m200[0m 4.845 ms - 46[0m[39m
+[32m[39m
+[32m2020-06-01T05:35:07.878Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005294 [32m200[0m 910.275 ms - 57[0m[39m
+[32m[39m
+[32m2020-06-01T05:36:17.791Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:36:17.794Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:36:17.802Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-01T05:38:24.875Z - info: [0mGET /api/v1/delivery/cancelOrder/4631010005283 [32m200[0m 1020.978 ms - 57[0m[39m
+[32m[39m
+[32m2020-06-01T05:38:39.176Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T05:38:39.178Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T05:38:39.186Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-01T06:56:18.913Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T06:56:18.918Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T06:56:18.926Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-01T06:56:58.463Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 27.081 ms - 79[0m[39m
+[32m[39m
+[32m2020-06-01T06:57:16.864Z - info: [0mPOST /api/v1/rate/calculate [32m200[0m 13.310 ms - 81[0m[39m
+[32m[39m
+[32m2020-06-01T06:57:57.202Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T06:57:57.204Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T06:57:57.212Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-01T07:01:43.105Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-01T07:01:43.108Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-01T07:01:43.116Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m

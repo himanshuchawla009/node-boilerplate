@@ -83,8 +83,8 @@ const loginAdmin = async (req, res, next) => {
 (async () => {
     try {
         console.log("generating super admin")
-        let email = "himanshuchawla2014@gmail.com"
-        let password = "12345678";
+        let email = process.env.adminEmail;
+        let password = process.env.adminPassword;
         let adminDetails = await dao.findOne({ model: admins, params: { email } });
         if (!!adminDetails) {
             console.log("admin already exists")

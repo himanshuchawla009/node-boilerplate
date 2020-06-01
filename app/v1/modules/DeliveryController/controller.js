@@ -102,13 +102,15 @@ deliveryController.generateOrder = async (req, res, next) => {
             cod_amount,
             total_amount,
             quantity,
-            country
+            country,
+            weight
 
         } = req.body;
 
         let orderId = waybill;
         let orderDetails = {
             "waybill": waybill,
+            "weight":weight,
             "order": orderId,
             "phone": phone,
             "products_desc": productDescription,
@@ -125,6 +127,7 @@ deliveryController.generateOrder = async (req, res, next) => {
             "city": city
         }
         let service = await deliveryService(DELIVERY_SERVICE_NAME);
+        
 
         let order = await service.createOrder(orderDetails);
 
