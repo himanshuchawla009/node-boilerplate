@@ -152,9 +152,9 @@ module.exports = function (router) {
 		controller.getPickups
 	);
 
-	router.get('/delivery/getOrderByWayBill',
+	router.get('/delivery/getOrderById',
 		authenticateClient,
-		controller.getOrderByWayBill
+		controller.getOrderById
 	);
 
 	router.get('/delivery/getPickupById',

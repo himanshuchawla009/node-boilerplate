@@ -4,63 +4,7 @@ var Schema = mongoose.Schema;
 
 
 var orderSchema = new Schema({
-  "waybill": {
-    type: String,
-    required: true
-  },
-  "order": {
-    type: String,
-    required: true
-  },
-  "phone": {
-    type: String,
-    required: true
-  },
-  "products_desc": {
-    type: String,
-    required: true
-  },
-  "cod_amount": {
-    type: String,
-    required: true
-  },
-  "name": {
-    type: String,
-    required: true
-  },
-  "country": {
-    type: String,
-    required: true
-  },
-  "order_date": {
-    type: String,
-    required: true
-  },
-  "total_amount": {
-    type: String,
-    required: true
-  },
-  "add": {
-    type: String,
-    required: true
-  },
-  "pin": {
-    type: String,
-    required: true
-  },
-  "quantity": {
-    type: String,
-    required: true
-  },
-  "payment_mode": {
-    type: String,
-    required: true
-  },
-  "state": {
-    type: String,
-    required: true
-  },
-  "city": {
+  "pickUpLocation": {
     type: String,
     required: true
   },
@@ -68,8 +12,8 @@ var orderSchema = new Schema({
     type: String,
     required: true
   },
-  "weight": {
-    type: Number,
+  "shipments":{
+    type: Array,
     required: true
   }
 }, {
@@ -109,7 +53,7 @@ var pickUpSchema = new Schema({
 var orders = mongoose.model('Orders', orderSchema, 'Orders');
 var pickups = mongoose.model('Pickups', pickUpSchema, 'Pickups');
 
-module.exports = {orders,pickups};
+module.exports = { orders, pickups };
 
 
 

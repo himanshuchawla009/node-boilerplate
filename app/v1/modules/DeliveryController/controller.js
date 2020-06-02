@@ -5,6 +5,7 @@ const boom = require("boom"),
     logger = require("../../../../config/logger"),
     deliveryService = require('../../services/partner'),
     dao = require('./dao'),
+    uuid = require('uuid'),
     { orders, pickups } = require('./model');
 
 
@@ -40,7 +41,6 @@ deliveryController.checkPincode = async (req, res, next) => {
                 data: pincodeRes
             });
         }
-
 
     }
     catch (err) {
@@ -89,52 +89,55 @@ deliveryController.generateOrder = async (req, res, next) => {
          */
 
         let {
-            name,
-            order_date,
-            pincode,
-            state,
-            city,
-            paymentMode,
-            address,
-            waybill,
-            phone,
-            productDescription,
-            cod_amount,
-            total_amount,
-            quantity,
-            country,
-            weight
-
+            shipments,
+            waybill
         } = req.body;
 
-        let orderId = waybill;
-        let orderDetails = {
-            "waybill": waybill,
-            "weight":weight,
-            "order": orderId,
-            "phone": phone,
-            "products_desc": productDescription,
-            "cod_amount": cod_amount,
-            "name": name,
-            "country": country,
-            "order_date": order_date,
-            "total_amount": total_amount,
-            "add": address,
-            "pin": pincode,
-            "quantity": quantity,
-            "payment_mode": paymentMode,
-            "state": state,
-            "city": city
-        }
-        let service = await deliveryService(DELIVERY_SERVICE_NAME);
-        
+        let orderId = uuid.v4().toString();
+        let allShipments = [];
 
-        let order = await service.createOrder(orderDetails);
+        let service = await deliveryService(DELIVERY_SERVICE_NAME);
+
+
+        for (let i = 0; i < shipments.length; i++) {
+            let currentShipment = shipments[i];
+            let currentWayBill = await service.createWayBill()
+            let ship = {
+                "waybill": currentWayBill,
+                "weight": currentShipment.weight,
+                "order": orderId,
+                "phone": currentShipment.phone,
+                "products_desc": currentShipment.productDescription,
+                "cod_amount": currentShipment.cod_amount,
+                "name": currentShipment.name,
+                "country": currentShipment.country,
+                "order_date": currentShipment.order_date,
+                "total_amount": currentShipment.total_amount,
+                "add": currentShipment.address,
+                "pin": currentShipment.pincode,
+                "quantity": currentShipment.quantity,
+                "payment_mode": currentShipment.paymentMode,
+                "state": currentShipment.state,
+                "city": currentShipment.city
+            };
+
+            allShipments.push(ship)
+
+        }
+
+
+
+
+
+
+
+        let order = await service.createOrder(allShipments);
 
 
 
         order = JSON.parse(order);
         if (order.success == false) {
+
             if (order.packages.length > 0) {
                 return res.status(400).json({
                     success: false,
@@ -143,7 +146,7 @@ deliveryController.generateOrder = async (req, res, next) => {
             } else {
                 return res.status(400).json({
                     success: false,
-                    message: "An internal Error has occurred, Please get in touch with gaint logistics team"
+                    message: order.rmk + "An internal Error has occurred, Please get in touch with gaint logistics team"
                 });
             }
 
@@ -151,19 +154,42 @@ deliveryController.generateOrder = async (req, res, next) => {
         else if (!!order.rmk) {
             return res.status(400).json({
                 success: false,
-                message: "An internal Error has occurred, Please get in touch with gaint logistics team"
+                message: order.rmk + "An internal Error has occurred, Please get in touch with gaint logistics team"
             });
         } else {
-            let saveOrderObj = {
-                ...orderDetails,
-                clientId: req.user._id,
+            try {
+                let saveOrderObj = {
+                    pickUpLocation: "GAINT LOGISTIC",
+                    clientId: req.user._id,
+                    shipments: allShipments
 
+                }
+                await dao.create({ model: orders, obj: saveOrderObj });
+
+
+
+                return res.status(200).json({
+                    success: true,
+                    data: order
+                });
+
+            } catch (error) {
+                let orderstatus = await service.cancelOrder(waybill)
+
+                //if some error occurs after creating order  then cancel the order
+                if (!!orderstatus.status) {
+                    return res.status(200).json({
+                        success: true,
+                        message: "Some error occured after placing order, so current order is cancelled. Please contact our team"
+                    });
+                } else {
+                    return res.status(500).json({
+                        success: false,
+                        message: "Unable to create order, please contact our team"
+                    });
+
+                }
             }
-            await dao.create({ model: orders, obj: saveOrderObj });
-            return res.status(200).json({
-                success: true,
-                data: order
-            });
 
         }
 
@@ -291,48 +317,43 @@ deliveryController.cancelOrder = async (req, res, next) => {
          * 
          */
         let { waybill } = req.params;
-        console.log(req.user._id, "client id");
-        let orderDetails = await dao.findOne({
-            model: orders, params: {
-                clientId: req.user._id,
-                waybill
-            }
-        });
+      
+        let service = await deliveryService(DELIVERY_SERVICE_NAME);
 
-        if (!!orderDetails) {
-            let service = await deliveryService(DELIVERY_SERVICE_NAME);
+        let orderstatus = await service.cancelOrder(waybill)
+        // if (!!orderstatus.Error) {
+        //     return res.status(400).json({
+        //         success: false,
+        //         message: orderstatus.Error
+        //     });
+        // } else {
 
-            let orderstatus = await service.cancelOrder(waybill)
-            // if (!!orderstatus.Error) {
-            //     return res.status(400).json({
-            //         success: false,
-            //         message: orderstatus.Error
-            //     });
-            // } else {
+        // }
 
-            // }
+        if (!!orderstatus.status) {
+            console.log(orderstatus)
+            return res.status(400).json({
+                success: true,
+                message: orderstatus.error
+            });
+        } 
 
-            if (!!orderstatus.status) {
-                return res.status(200).json({
-                    success: true,
-                    message: orderstatus.remark
-                });
-            } else {
-                return res.status(500).json({
-                    success: false,
-                    message: "Unable to cancel order, please contact gaint logistics team"
-                });
-
-            }
-
-
-        } else {
+        else if (orderstatus.status == true) {
+            console.log(orderstatus)
             return res.status(200).json({
+                success: true,
+                message: orderstatus.remark
+            });
+        } else {
+            return res.status(500).json({
                 success: false,
-                message: "Invalid order id"
+                message: "Unable to cancel order, please contact gaint logistics team"
             });
 
         }
+
+
+
 
 
 
@@ -408,7 +429,7 @@ deliveryController.getPickups = async (req, res, next) => {
 
 };
 
-deliveryController.getOrderByWayBill = async (req, res, next) => {
+deliveryController.getOrderById = async (req, res, next) => {
     try {
 
         /**
@@ -418,7 +439,7 @@ deliveryController.getOrderByWayBill = async (req, res, next) => {
         console.log(req.user._id, "client id");
         let order = await dao.findOne({
             model: orders, params: {
-                waybill: req.query.waybill
+                waybill: req.query.orderId
             }
         });
 

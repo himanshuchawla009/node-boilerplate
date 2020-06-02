@@ -53,8 +53,10 @@ class Delivery {
         })
     }
 
-    async createOrder(orderDetails) {
+    async createOrder(shipments) {
 
+        let orderDetails = shipments[0]
+        let stringifiedShipment = JSON.stringify(shipments)
 
         return new Promise(async (resolve, reject) => {
             try {
@@ -62,24 +64,7 @@ class Delivery {
                     "pickup_location": {
                         "name": "GAINT LOGISTIC"
                     },
-                    "shipments": [{
-                        "waybill": "${orderDetails.waybill}",
-                        "order": "${orderDetails.order}",
-                        "phone": "${orderDetails.phone}",
-                        "products_desc": "${orderDetails.products_desc}",
-                        "cod_amount": "${orderDetails.cod_amount}",
-                        "name": "${orderDetails.name}",
-                        "country": "${orderDetails.country}",
-                        "order_date": "${orderDetails.order_date}",
-                        "total_amount": "${orderDetails.total_amount}",
-                        "add": "${orderDetails.add}",
-                        "pin": "${orderDetails.pin}",
-                        "quantity": "${orderDetails.quantity}",
-                        "payment_mode": "${orderDetails.payment_mode}",
-                        "state": "${orderDetails.state}",
-                        "city": "${orderDetails.city}",
-                        "weight":"${orderDetails.weight}"
-                    }]
+                    "shipments": ${stringifiedShipment}
                 }`
 
                 console.log("body", body)
