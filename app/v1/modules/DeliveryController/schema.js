@@ -19,7 +19,8 @@ module.exports = {
                 total_amount: Joi.number().required(),
                 weight: Joi.number().required(),
                 quantity: Joi.number().required(),
-            }).required()).required()
+            }).required()).required(),
+            serviceType: Joi.string().valid('DELHIVERY','DTDC')
 
         })
     },
