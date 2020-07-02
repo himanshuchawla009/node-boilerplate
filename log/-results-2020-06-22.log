@@ -1,3 +1,90 @@
 [32m2020-06-22T06:18:27.423Z - info: ✅ Mongodb Connected[39m
 [32m2020-06-22T06:18:27.425Z - info: ✅ Connected to Database : logistics[39m
 [31m2020-06-22T06:18:27.433Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-22T17:35:24.750Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T17:35:24.752Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-22T17:35:24.762Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-22T17:35:44.488Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T17:35:44.491Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-22T17:35:44.502Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-22T17:40:12.020Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T17:40:12.022Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-22T17:40:12.033Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-22T17:41:48.975Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T17:41:48.977Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-22T17:41:48.987Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-22T17:42:32.129Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T17:42:32.132Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-22T17:42:32.141Z - error: UNHANDLED REJECTIONIllegal arguments: undefined, number[39m
+[32m2020-06-22T17:43:03.159Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T17:43:03.162Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T17:43:37.610Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T17:43:37.612Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T17:59:44.982Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001 [33m400[0m 10.662 ms - 45[0m[39m
+[32m[39m
+[32m2020-06-22T18:08:22.360Z - info: [0mPOST /api/v1/admin/generateClient [32m200[0m 20.869 ms - 104[0m[39m
+[32m[39m
+[31m2020-06-22T18:08:33.659Z - error: INVALID DELIVERY SERVICE[39m
+[32m2020-06-22T18:08:33.666Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001 [31m500[0m 14.947 ms - 785[0m[39m
+[32m[39m
+[32m2020-06-22T18:09:24.978Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DELHIVERY [32m200[0m 534.635 ms - 318[0m[39m
+[32m[39m
+[31m2020-06-22T18:10:20.343Z - error: INVALID DELIVERY SERVICE[39m
+[32m2020-06-22T18:10:20.350Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DTDC [31m500[0m 8.594 ms - 785[0m[39m
+[32m[39m
+[32m2020-06-22T18:11:06.790Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:11:06.792Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T18:11:14.947Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DTDC [32m200[0m 15.360 ms - 76[0m[39m
+[32m[39m
+[32m2020-06-22T18:11:40.885Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DELHIVERY [32m200[0m 378.908 ms - 318[0m[39m
+[32m[39m
+[32m2020-06-22T18:13:38.671Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:13:38.674Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-22T18:13:45.932Z - error: Cannot read property 'length' of undefined[39m
+[32m2020-06-22T18:13:45.940Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DELHIVERY [31m500[0m 368.273 ms - 306[0m[39m
+[32m[39m
+[32m2020-06-22T18:14:21.401Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:14:21.403Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-22T18:14:24.101Z - error: Cannot read property 'length' of undefined[39m
+[32m2020-06-22T18:14:24.110Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DELHIVERY [31m500[0m 359.708 ms - 306[0m[39m
+[32m[39m
+[32m2020-06-22T18:14:36.221Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:14:36.224Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-22T18:14:38.363Z - error: Cannot read property 'length' of undefined[39m
+[32m2020-06-22T18:14:38.384Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DELHIVERY [31m500[0m 381.059 ms - 306[0m[39m
+[32m[39m
+[31m2020-06-22T18:14:58.052Z - error: Cannot read property 'postal_code' of undefined[39m
+[32m2020-06-22T18:14:58.055Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=12400111&serviceProvider=DELHIVERY [31m500[0m 286.961 ms - 281[0m[39m
+[32m[39m
+[32m2020-06-22T18:15:59.689Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:15:59.691Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T18:16:01.282Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:16:01.284Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T18:16:04.088Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=12400111&serviceProvider=DELHIVERY [32m200[0m 417.551 ms - 74[0m[39m
+[32m[39m
+[32m2020-06-22T18:16:09.835Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DELHIVERY [32m200[0m 341.398 ms - 281[0m[39m
+[32m[39m
+[32m2020-06-22T18:16:23.601Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DTDC [32m200[0m 12.589 ms - 76[0m[39m
+[32m[39m
+[32m2020-06-22T18:16:44.657Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:16:44.660Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T18:17:11.851Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:17:11.854Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T18:17:40.066Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:17:40.069Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T18:17:41.613Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DTDC [32m200[0m 34.714 ms - 64[0m[39m
+[32m[39m
+[32m2020-06-22T18:19:04.018Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:19:04.021Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T18:19:05.391Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:19:05.394Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T18:19:08.637Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DTDC [33m400[0m 11.626 ms - 130[0m[39m
+[32m[39m
+[32m2020-06-22T18:19:11.179Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DTD [33m400[0m 4.373 ms - 206[0m[39m
+[32m[39m
+[32m2020-06-22T18:19:15.610Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DTDC [33m400[0m 2.493 ms - 130[0m[39m
+[32m[39m
+[32m2020-06-22T18:19:44.090Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-22T18:19:44.093Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-22T18:19:45.863Z - info: [0mGET /api/v1/delivery/checkPincode?pincode=124001&serviceProvider=DTDC [32m200[0m 17.615 ms - 64[0m[39m
+[32m[39m

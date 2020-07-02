@@ -19,8 +19,12 @@ class Delivery {
                 };
 
                 let apiRes = await rp(options)
-                console.log(apiRes);
-                resolve(apiRes);
+                console.log(apiRes.delivery_codes);
+                let pincodeObj = {};
+                if(!!apiRes.delivery_codes && apiRes.delivery_codes.length > 0){
+                    pincodeObj = apiRes.delivery_codes[0].postal_code;
+                }
+                resolve(pincodeObj);
             } catch (error) {
                 reject(error);
 

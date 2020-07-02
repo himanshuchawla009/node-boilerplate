@@ -1,6 +1,13 @@
 const { Joi } = require('celebrate');
 
 module.exports = {
+    checkPincode: {
+        query: Joi.object().keys({
+            serviceProvider: Joi.string().valid('DELHIVERY','DTDC').required(),
+            pincode: Joi.string().required()
+
+        })
+    },
     createOrder: {
         body: Joi.object().keys({
             shipments: Joi.array().items(Joi.object().keys({
@@ -20,7 +27,7 @@ module.exports = {
                 weight: Joi.number().required(),
                 quantity: Joi.number().required(),
             }).required()).required(),
-            serviceType: Joi.string().valid('DELHIVERY','DTDC')
+            service: Joi.string().valid('DELHIVERY', 'DTDC')
 
         })
     },

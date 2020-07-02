@@ -1,25 +1,23 @@
-const rp = require('request-promise');
-
+const rp = require('request-promise'),
+    { pickups, wayBills, pincodes, orders, shipments } = require('../../modules/DeliveryController/model'),
+    dao = require('../../modules/DeliveryController/dao')
 class DTDC {
     constructor() {
-        
+
+        this.service = 'DTDC'
 
     }
 
     async checkPinCodeAvailable(pincode) {
         return new Promise(async (resolve, reject) => {
             try {
-                let url = `${this.apiUrl}/c/api/pin-codes/json/?token=${this.token}&filter_codes=${pincode}`;
-
-                let options = {
-                    method: 'GET',
-                    uri: url,
-                    json: true // Automatically stringifies the body to JSON
-                };
-
-                let apiRes = await rp(options)
-                console.log(apiRes);
-                resolve(apiRes);
+                let data = await dao.findOne({
+                    model: pincodes, params: {
+                        pin: pincode,
+                        service: this.service
+                    }
+                });
+                resolve(data);
             } catch (error) {
                 reject(error);
 
@@ -27,22 +25,25 @@ class DTDC {
         })
     }
 
-   
+
 
     async createWayBill() {
         return new Promise(async (resolve, reject) => {
             try {
-                let url = `${this.apiUrl}/waybill/api/fetch/json/?token=${this.token}`;
+                let waybillData = await dao.findOneAndUpdate({
+                    model: wayBills,
+                    query: {
+                        service: this.service,
+                        status: 'AVAILABLE'
+                    },
+                    params: {
+                        status: 'PROCESSING'
+                    }
 
-                let options = {
-                    method: 'GET',
-                    uri: url,
-                    json: true // Automatically stringifies the body to JSON
-                };
+                });
+                let waybill = waybillData.waybill;
 
-                let apiRes = await rp(options)
-                console.log(apiRes);
-                resolve(apiRes);
+                resolve(waybill);
             } catch (error) {
                 reject(error);
 
@@ -50,38 +51,16 @@ class DTDC {
         })
     }
 
-    async createOrder(shipments) {
+    async createOrder(shipments, order) {
 
-        let orderDetails = shipments[0]
-        let stringifiedShipment = JSON.stringify(shipments)
 
         return new Promise(async (resolve, reject) => {
             try {
-                let body = `format=json&data={
-                    "pickup_location": {
-                        "name": "GAINT LOGISTIC"
-                    },
-                    "shipments": ${stringifiedShipment}
-                }`
 
-                console.log("body", body)
-                let url = `${this.apiUrl}/api/cmu/create.json?format=json`;
+                await dao.create({ model: orders, obj: order })
+                await dao.insert({ model: shipments, docArray: shipments })
 
-                let headers = {
-                    'Authorization': `Token ${this.token}`,
-                    'content-type': 'application/json'
-                }
-                let options = {
-                    method: 'POST',
-                    uri: url,
-                    headers,
-                    body,
-                    //json: true 
-                };
-
-                let apiRes = await rp(options)
-                console.log(apiRes);
-                resolve(apiRes);
+                resolve(true);
             } catch (error) {
                 reject(error);
 
@@ -94,22 +73,7 @@ class DTDC {
     async createPackingSlip(waybill) {
         return new Promise(async (resolve, reject) => {
             try {
-                let url = `${this.apiUrl}/api/p/packing_slip?wbns=${waybill}`;
 
-                let headers = {
-                    'Authorization': `Token ${this.token}`
-
-                }
-                let options = {
-                    method: 'GET',
-                    uri: url,
-                    headers,
-                    json: true // Automatically stringifies the body to JSON
-                };
-
-                let apiRes = await rp(options)
-                console.log(apiRes);
-                resolve(apiRes);
             } catch (error) {
                 reject(error);
 
@@ -121,31 +85,7 @@ class DTDC {
     async createPickupRequest(pickup_time, pickup_date, expected_package_count) {
         return new Promise(async (resolve, reject) => {
             try {
-                let url = `${this.apiUrl}/​fm/request/new/`;
 
-                let headers = {
-                    'Authorization': `Token ${this.token}`
-
-                }
-
-                let body = {
-                    "pickup_time": pickup_time,
-                    "pickup_date": pickup_date,
-                    "pickup_location": "GAINT LOGISTIC",
-                    "expected_package_count": expected_package_count
-
-                }
-                let options = {
-                    method: 'POST',
-                    uri: url,
-                    body: JSON.stringify(body),
-                    headers,
-                    json: true // Automatically stringifies the body to JSON
-                };
-
-                let apiRes = await rp(options)
-                console.log(apiRes);
-                resolve(apiRes);
             } catch (error) {
                 reject(error);
 
@@ -159,17 +99,14 @@ class DTDC {
 
         return new Promise(async (resolve, reject) => {
             try {
-                let url = `${this.apiUrl}/api/v1/packages/json/?waybill=${waybill}&verbose=2&token=${this.token}`;
 
-                let options = {
-                    method: 'GET',
-                    uri: url,
-                    json: true // Automatically stringifies the body to JSON
-                };
-
-                let apiRes = await rp(options)
-                console.log(apiRes);
-                resolve(apiRes);
+                let status = await dao.find({
+                    model: shipments, query: {
+                        service: this.service,
+                        waybill
+                    }
+                })
+                resolve(status)
             } catch (error) {
                 reject(error);
 
@@ -185,27 +122,16 @@ class DTDC {
 
         return new Promise(async (resolve, reject) => {
             try {
-                let url = `${this.apiUrl}/api/p/edit`;
-                let headers = {
-                    'Authorization': `Token ${this.token}`
-
-                }
-
-                let body = {
-                    "waybill": waybill,
-                    "cancellation": "true"
-                }
-                let options = {
-                    method: 'POST',
-                    body,
-                    uri: url,
-                    headers,
-                    json: true // Automatically stringifies the body to JSON
-                };
-
-                let apiRes = await rp(options)
-                console.log(apiRes);
-                resolve(apiRes);
+                await dao.update({
+                    model: shipments, query: {
+                        service: this.service,
+                        waybill
+                    }, params: {
+                        status: 'CANCELLED'
+                    }, options: {
+                        multi: true
+                    }
+                })
             } catch (error) {
                 reject(error);
 

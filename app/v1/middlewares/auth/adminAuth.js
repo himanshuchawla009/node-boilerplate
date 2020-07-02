@@ -1,5 +1,6 @@
 const { admins } = require('../../modules/AdminController/model');
 const dao = require('../../modules/AdminController/dao');
+require('dotenv').config();
 const bcrypt = require('bcryptjs');
 const presets = require("../../../../utils/presets");
 const jwt = require('jsonwebtoken');
@@ -82,7 +83,7 @@ const loginAdmin = async (req, res, next) => {
 
 (async () => {
     try {
-        console.log("generating super admin")
+        console.log("generating super admin",process.env.adminEmail)
         let email = process.env.adminEmail;
         let password = process.env.adminPassword;
         let adminDetails = await dao.findOne({ model: admins, params: { email } });

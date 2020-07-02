@@ -20,27 +20,46 @@ deliveryController.checkPincode = async (req, res, next) => {
          * checking if pin code is available for delivery
          */
 
-        let { pincode } = req.query;
+        let { pincode, serviceProvider } = req.query;
 
-        let service = await deliveryService(DELIVERY_SERVICE_NAME);
+        let service = await deliveryService(serviceProvider);
 
         let pincodeRes = await service.checkPinCodeAvailable(pincode);
 
-        if (pincodeRes.delivery_codes.length > 0) {
+        if (serviceProvider === 'DELHIVERY') {
+            if (Object.keys(pincodeRes).length > 0) {
 
-            return res.status(200).json({
-                success: true,
-                message: "Pincode available for delivery",
-                data: pincodeRes
-            });
+                return res.status(200).json({
+                    success: true,
+                    message: "Pincode available for delivery",
+                    data: pincodeRes
+                });
+            } else {
+
+                return res.status(200).json({
+                    success: false,
+                    message: "Pincode not available for delivery",
+                });
+            }
         } else {
 
-            return res.status(200).json({
-                success: false,
-                message: "Pincode not available for delivery",
-                data: pincodeRes
-            });
+            if(!!pincodeRes) {
+
+         return res.status(200).json({
+                    success: true,
+                    message: "Pincode available for delivery",
+                    data: pincodeRes
+                });
+            } else {
+
+                return res.status(200).json({
+                    success: false,
+                    message: "Pincode not available for delivery",
+                });
+            }
         }
+
+
 
     }
     catch (err) {
@@ -90,13 +109,13 @@ deliveryController.generateOrder = async (req, res, next) => {
 
         let {
             shipments,
-            waybill
+            serviceProvider
         } = req.body;
 
         let orderId = uuid.v4().toString();
         let allShipments = [];
 
-        let service = await deliveryService(DELIVERY_SERVICE_NAME);
+        let service = await deliveryService(serviceProvider);
 
 
         for (let i = 0; i < shipments.length; i++) {
@@ -118,7 +137,8 @@ deliveryController.generateOrder = async (req, res, next) => {
                 "quantity": currentShipment.quantity,
                 "payment_mode": currentShipment.paymentMode,
                 "state": currentShipment.state,
-                "city": currentShipment.city
+                "city": currentShipment.city,
+                "status": "MANIFESTED"
             };
 
             allShipments.push(ship)
@@ -131,67 +151,86 @@ deliveryController.generateOrder = async (req, res, next) => {
 
 
 
-        let order = await service.createOrder(allShipments);
+        if(serviceProvider === 'DTDC') {
+            let saveOrderObj = {
+                pickUpLocation: "GAINT LOGISTIC",
+                clientId: req.user._id,
+                shipments: allShipments
 
+            }
+            let order = await service.createOrder(allShipments, saveOrderObj);
+            return res.status(200).json({
+                success: true,
+                message: "Successfully created order",
+                waybill
+            });
 
+        }
+        if (serviceProvider === 'DELHIVERY') {
+            let order = await service.createOrder(allShipments);
 
-        order = JSON.parse(order);
-        if (order.success == false) {
+            order = JSON.parse(order);
+            if (order.success == false) {
 
-            if (order.packages.length > 0) {
-                return res.status(400).json({
-                    success: false,
-                    message: order.packages[0].remarks
-                });
-            } else {
+                if (order.packages.length > 0) {
+                    return res.status(400).json({
+                        success: false,
+                        message: order.packages[0].remarks
+                    });
+                } else {
+                    return res.status(400).json({
+                        success: false,
+                        message: order.rmk + "An internal Error has occurred, Please get in touch with gaint logistics team"
+                    });
+                }
+
+            }
+            else if (!!order.rmk) {
                 return res.status(400).json({
                     success: false,
                     message: order.rmk + "An internal Error has occurred, Please get in touch with gaint logistics team"
                 });
-            }
+            } else {
+                try {
+                    let saveOrderObj = {
+                        pickUpLocation: "GAINT LOGISTIC",
+                        clientId: req.user._id,
+                        shipments: allShipments
 
-        }
-        else if (!!order.rmk) {
-            return res.status(400).json({
-                success: false,
-                message: order.rmk + "An internal Error has occurred, Please get in touch with gaint logistics team"
-            });
-        } else {
-            try {
-                let saveOrderObj = {
-                    pickUpLocation: "GAINT LOGISTIC",
-                    clientId: req.user._id,
-                    shipments: allShipments
-
-                }
-                await dao.create({ model: orders, obj: saveOrderObj });
+                    }
+                    await dao.create({ model: orders, obj: saveOrderObj });
+                    await dao.insert({ model: shipments, docArray: allShipments });
 
 
 
-                return res.status(200).json({
-                    success: true,
-                    data: order
-                });
-
-            } catch (error) {
-                let orderstatus = await service.cancelOrder(waybill)
-
-                //if some error occurs after creating order  then cancel the order
-                if (!!orderstatus.status) {
                     return res.status(200).json({
                         success: true,
-                        message: "Some error occured after placing order, so current order is cancelled. Please contact our team"
-                    });
-                } else {
-                    return res.status(500).json({
-                        success: false,
-                        message: "Unable to create order, please contact our team"
+                        data: order
                     });
 
+                } catch (error) {
+                    let orderstatus = await service.cancelOrder(waybill)
+
+                    //if some error occurs after creating order  then cancel the order
+                    if (!!orderstatus.status) {
+                        return res.status(200).json({
+                            success: true,
+                            message: "Some error occured after placing order, so current order is cancelled. Please contact our team"
+                        });
+                    } else {
+                        return res.status(500).json({
+                            success: false,
+                            message: "Unable to create order, please contact our team"
+                        });
+
+                    }
                 }
-            }
 
+            }
         }
+
+
+
 
     }
     catch (err) {
@@ -281,23 +320,31 @@ deliveryController.trackOrder = async (req, res, next) => {
          * track order using waybill number
          * 
          */
-        let { waybill } = req.params;
-        let service = await deliveryService(DELIVERY_SERVICE_NAME);
+        let { waybill, serviceProvider } = req.params;
+        let service = await deliveryService(serviceProvider);
 
         let orderstatus = await service.trackOrder(waybill)
-        if (!!orderstatus.Error) {
-            return res.status(400).json({
-                success: false,
-                message: orderstatus.Error
-            });
+
+        if (serviceProvider == 'DELHIVERY') {
+            if (!!orderstatus.Error) {
+                return res.status(400).json({
+                    success: false,
+                    message: orderstatus.Error
+                });
+            } else {
+                return res.status(200).json({
+                    success: true,
+                    data: orderstatus
+                });
+            }
         } else {
+
             return res.status(200).json({
                 success: true,
                 data: orderstatus
             });
+
         }
-
-
 
 
     }
@@ -316,9 +363,9 @@ deliveryController.cancelOrder = async (req, res, next) => {
          * track order using waybill number
          * 
          */
-        let { waybill } = req.params;
-      
-        let service = await deliveryService(DELIVERY_SERVICE_NAME);
+        let { waybill, serviceProvider } = req.params;
+
+        let service = await deliveryService(serviceProvider);
 
         let orderstatus = await service.cancelOrder(waybill)
         // if (!!orderstatus.Error) {
@@ -330,27 +377,36 @@ deliveryController.cancelOrder = async (req, res, next) => {
 
         // }
 
-        if (!!orderstatus.status) {
-            console.log(orderstatus)
-            return res.status(400).json({
-                success: true,
-                message: orderstatus.error
-            });
-        } 
+        if (serviceProvider === 'DELHIVERY') {
+            if (!!orderstatus.status) {
+                console.log(orderstatus)
+                return res.status(400).json({
+                    success: true,
+                    message: orderstatus.error
+                });
+            }
 
-        else if (orderstatus.status == true) {
-            console.log(orderstatus)
+            else if (orderstatus.status == true) {
+                console.log(orderstatus)
+                return res.status(200).json({
+                    success: true,
+                    message: orderstatus.remark
+                });
+            } else {
+                return res.status(500).json({
+                    success: false,
+                    message: "Unable to cancel order, please contact gaint logistics team"
+                });
+
+            }
+
+        } else {
             return res.status(200).json({
                 success: true,
-                message: orderstatus.remark
+                message: "Successfully cancelled order"
             });
-        } else {
-            return res.status(500).json({
-                success: false,
-                message: "Unable to cancel order, please contact gaint logistics team"
-            });
-
         }
+
 
 
 

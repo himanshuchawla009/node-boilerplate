@@ -1,0 +1,27 @@
+[32m2020-06-28T10:51:44.590Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-28T10:51:44.592Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-28T10:55:41.160Z - info: [0mPOST /api/v1/admin/login [33m401[0m 151.977 ms - 55[0m[39m
+[32m[39m
+[32m2020-06-28T10:56:06.343Z - info: [0mPOST /api/v1/admin/login [32m200[0m 155.129 ms - 278[0m[39m
+[32m[39m
+[32m2020-06-28T10:56:07.560Z - info: [0mGET /api/v1/user/profile [33m404[0m 4.585 ms - 48[0m[39m
+[32m[39m
+[32m2020-06-28T10:58:10.274Z - info: [0mPOST /api/v1/admin/login [32m200[0m 120.802 ms - 278[0m[39m
+[32m[39m
+[32m2020-06-28T10:59:17.477Z - info: [0mPOST /api/v1/admin/login [32m200[0m 177.032 ms - 278[0m[39m
+[32m[39m
+[32m2020-06-28T11:00:04.306Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-28T11:00:04.308Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-28T11:22:12.901Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-28T11:22:12.903Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-06-28T11:36:53.959Z - error: Clients is not defined[39m
+[32m2020-06-28T11:36:53.979Z - info: [0mGET /api/v1/admin/getAllUsers?page=1&limit=10 [31m500[0m 46.601 ms - 3203[0m[39m
+[32m[39m
+[32m2020-06-28T11:38:18.210Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-28T11:38:18.213Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-28T11:38:23.934Z - info: [0mGET /api/v1/admin/getAllUsers?page=1&limit=10 [32m200[0m 19.003 ms - 1701[0m[39m
+[32m[39m
+[32m2020-06-28T11:49:25.295Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-28T11:49:25.298Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-06-28T11:53:39.194Z - info: ✅ Mongodb Connected[39m
+[32m2020-06-28T11:53:39.197Z - info: ✅ Connected to Database : logistics[39m

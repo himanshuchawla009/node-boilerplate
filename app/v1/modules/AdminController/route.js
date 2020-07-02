@@ -71,4 +71,38 @@ module.exports = function (router) {
 		controller.updatePickupRequest
 	);
 
+	router.post('/admin/updateShipmentStatus',
+		authenticateAdmin,
+
+		celebrate(validateSchema.updateShipmentStatus),
+		controller.updateShipmentStatus
+	);
+
+	router.post('/admin/addPincode',
+		authenticateAdmin,
+		celebrate(validateSchema.addPincode),
+		controller.addPincode
+	);
+
+	router.post('/admin/addWayBill',
+		authenticateAdmin,
+
+		celebrate(validateSchema.addWayBill),
+		controller.addWayBill
+	);
+
+	router.post('/admin/fetchPincodes',
+		authenticateAdmin,
+		controller.fetchPincodes
+	);
+
+	router.post('/admin/fetchWayBills',
+		authenticateAdmin,
+		controller.fetchWayBills
+	);
+
+	router.get('/admin/getAllUsers',
+		authenticateAdmin,
+		controller.getAllUsers
+	);
 }

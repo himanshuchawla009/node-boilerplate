@@ -94,11 +94,27 @@ return new Promise((resolve, reject) => {
 });
 
 };
+const insert = function ({
+  model=model,
+  docArray,
+  cb = () => { } // eslint-disable-line
+  }) {
+  return new Promise((resolve, reject) => {
 
-const update = function (model,query, params, cb) {
+    model.insert(docArray,(err, data)=>{
+      if (!err) {
+        cb(false, data);
+      } else {
+        cb(err, false);
+      }
+    })
+  });
+  
+  };
+const update = function (model,query, params,options={}, cb) {
 model.update(query, {
   $setOnInsert: params
-}, (err, data) => {
+},options, (err, data) => {
   if (!err) {
     cb(false, data);
   } else {
@@ -216,7 +232,8 @@ remove,
 findOneAndUpdate,
 findByIdAndUpdate,
 aggregatePipeline,
-deleteSoft
+deleteSoft,
+insert
 };
 
 module.exports = obj;

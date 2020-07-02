@@ -31,6 +31,7 @@ module.exports = function (router) {
 	   */
 	router.get('/delivery/checkPincode',
 		authenticateClient,
+		celebrate(validateSchema.checkPincode),
 		controller.checkPincode
 	);
 
@@ -51,6 +52,7 @@ module.exports = function (router) {
 	   */
 	router.get('/delivery/generateWayBill',
 		authenticateClient,
+		
 		controller.generateWayBill
 	);
 	/**
