@@ -91,12 +91,12 @@ module.exports = function (router) {
 		controller.addWayBill
 	);
 
-	router.post('/admin/fetchPincodes',
+	router.get('/admin/fetchPincodes',
 		authenticateAdmin,
 		controller.fetchPincodes
 	);
 
-	router.post('/admin/fetchWayBills',
+	router.get('/admin/fetchWayBills',
 		authenticateAdmin,
 		controller.fetchWayBills
 	);

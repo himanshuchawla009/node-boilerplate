@@ -41,9 +41,16 @@ class DTDC {
                     }
 
                 });
-                let waybill = waybillData.waybill;
+                console.log("way bill data", waybillData)
+                if(!!waybillData) {
+                    let waybill = waybillData.waybill;
 
-                resolve(waybill);
+                    resolve(waybill);
+
+                } else {
+                    reject("DTDC service temporarily not available")
+                }
+
             } catch (error) {
                 reject(error);
 

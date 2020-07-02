@@ -27,7 +27,7 @@ module.exports = {
                 weight: Joi.number().required(),
                 quantity: Joi.number().required(),
             }).required()).required(),
-            service: Joi.string().valid('DELHIVERY', 'DTDC')
+            serviceProvider: Joi.string().valid('DELHIVERY', 'DTDC').required(),
 
         })
     },

@@ -101,10 +101,13 @@ const insert = function ({
   }) {
   return new Promise((resolve, reject) => {
 
-    model.insert(docArray,(err, data)=>{
+    model.insertMany(docArray,(err, data)=>{
       if (!err) {
+        resolve(data);
+
         cb(false, data);
       } else {
+        reject(err)
         cb(err, false);
       }
     })
@@ -116,8 +119,11 @@ model.update(query, {
   $setOnInsert: params
 },options, (err, data) => {
   if (!err) {
+    resolve(data);
+
     cb(false, data);
   } else {
+    reject(err)
     cb(err, false);
   }
 });

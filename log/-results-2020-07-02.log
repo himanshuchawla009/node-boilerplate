@@ -1,0 +1,111 @@
+[32m2020-07-02T17:13:28.523Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:13:28.525Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:14:19.449Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 8.867 ms - 45[0m[39m
+[32m[39m
+[32m2020-07-02T17:14:29.074Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 29.994 ms - 66[0m[39m
+[32m[39m
+[32m2020-07-02T17:14:43.734Z - info: [0mGET /api/v1/admin/fetchClientKey/ekta%20auto [33m401[0m 3.891 ms - 51[0m[39m
+[32m[39m
+[32m2020-07-02T17:15:01.369Z - info: [0mGET /api/v1/admin/fetchClientKey/ekta%20auto [32m200[0m 4.232 ms - 64[0m[39m
+[32m[39m
+[32m2020-07-02T17:15:34.647Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 14.369 ms - 129[0m[39m
+[32m[39m
+[31m2020-07-02T17:15:47.696Z - error: waybill is not defined[39m
+[32m2020-07-02T17:15:47.700Z - info: [0mPOST /api/v1/delivery/createOrder [31m500[0m 964.622 ms - 340[0m[39m
+[32m[39m
+[32m2020-07-02T17:16:42.636Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:16:42.639Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:17:05.354Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:17:05.356Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:17:11.073Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1324.101 ms - 123[0m[39m
+[32m[39m
+[32m2020-07-02T17:17:29.628Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:17:29.632Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:17:32.955Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1191.534 ms - 123[0m[39m
+[32m[39m
+[32m2020-07-02T17:21:10.640Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:21:10.643Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:21:12.815Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:21:12.819Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:21:20.576Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1308.785 ms - 123[0m[39m
+[32m[39m
+[32m2020-07-02T17:24:01.727Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:24:01.729Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:24:05.569Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1284.115 ms - 123[0m[39m
+[32m[39m
+[32m2020-07-02T17:25:59.546Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:25:59.549Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:26:05.622Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1265.894 ms - 123[0m[39m
+[32m[39m
+[32m2020-07-02T17:26:58.570Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:26:58.573Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:27:02.810Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1252.765 ms - 123[0m[39m
+[32m[39m
+[32m2020-07-02T17:29:10.117Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:29:10.119Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:29:14.003Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1604.579 ms - 123[0m[39m
+[32m[39m
+[32m2020-07-02T17:30:25.337Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:30:25.339Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:30:31.900Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1379.910 ms - 123[0m[39m
+[32m[39m
+[32m2020-07-02T17:31:13.337Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:31:13.340Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:31:20.752Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 865.301 ms - 445[0m[39m
+[32m[39m
+[32m2020-07-02T17:31:52.866Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:31:52.869Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:31:54.232Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:31:54.235Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:31:57.560Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1320.638 ms - 123[0m[39m
+[32m[39m
+[32m2020-07-02T17:32:08.643Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:32:08.645Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:32:39.961Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:32:39.964Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:33:55.709Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:33:55.711Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:34:00.718Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:34:00.721Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:34:26.509Z - info: [0mPOST /api/v1/delivery/createOrder [0m-[0m - ms - -[0m[39m
+[32m[39m
+[32m2020-07-02T17:35:30.820Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:35:30.823Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:35:43.726Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:35:43.729Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:35:46.520Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1028.506 ms - 446[0m[39m
+[32m[39m
+[31m2020-07-02T17:35:59.602Z - error: Cannot read property 'waybill' of null[39m
+[32m2020-07-02T17:35:59.607Z - info: [0mPOST /api/v1/delivery/createOrder [31m500[0m 23.182 ms - 325[0m[39m
+[32m[39m
+[32m2020-07-02T17:39:23.304Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:39:23.306Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-02T17:39:25.411Z - error: Cannot read property 'waybill' of null[39m
+[32m2020-07-02T17:39:25.417Z - info: [0mPOST /api/v1/delivery/createOrder [31m500[0m 23.040 ms - 325[0m[39m
+[32m[39m
+[32m2020-07-02T17:40:18.507Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:40:18.510Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-02T17:40:21.282Z - error: DTDC service temporarily not available[39m
+[32m2020-07-02T17:40:21.291Z - info: [0mPOST /api/v1/delivery/createOrder [31m500[0m 29.881 ms - 363[0m[39m
+[32m[39m
+[32m2020-07-02T17:42:36.715Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:42:36.719Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-02T17:42:40.397Z - error: DTDC service temporarily not available[39m
+[32m2020-07-02T17:42:40.403Z - info: [0mPOST /api/v1/delivery/createOrder [31m500[0m 24.243 ms - 363[0m[39m
+[32m[39m
+[32m2020-07-02T17:43:01.417Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:43:01.419Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-02T17:43:03.227Z - error: DTDC service temporarily not available[39m
+[32m2020-07-02T17:43:03.236Z - info: [0mPOST /api/v1/delivery/createOrder [31m500[0m 30.327 ms - 385[0m[39m
+[32m[39m
+[32m2020-07-02T17:44:09.699Z - info: [0mGET /api/v1/delivery/getOrders [32m200[0m 33.460 ms - 3355[0m[39m
+[32m[39m
+[32m2020-07-02T17:44:55.393Z - info: [0mGET /api/v1/delivery/getOrders [32m200[0m 10.904 ms - 5947[0m[39m
+[32m[39m
+[32m2020-07-02T17:45:59.166Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:45:59.170Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-02T17:46:01.008Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-02T17:46:01.010Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-02T17:46:03.872Z - error: DTDC service temporarily not available[39m
+[32m2020-07-02T17:46:03.879Z - info: [0mPOST /api/v1/delivery/createOrder [31m500[0m 20.502 ms - 385[0m[39m
+[32m[39m

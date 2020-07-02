@@ -7,6 +7,7 @@ const boom = require("boom"),
     dao = require('./dao'),
     uuid = require('uuid'),
     { orders, pickups } = require('./model');
+    model = require('./model');
 
 
 let DELIVERY_SERVICE_NAME = "DELHIVERY";
@@ -43,9 +44,9 @@ deliveryController.checkPincode = async (req, res, next) => {
             }
         } else {
 
-            if(!!pincodeRes) {
+            if (!!pincodeRes) {
 
-         return res.status(200).json({
+                return res.status(200).json({
                     success: true,
                     message: "Pincode available for delivery",
                     data: pincodeRes
@@ -109,7 +110,7 @@ deliveryController.generateOrder = async (req, res, next) => {
 
         let {
             shipments,
-            serviceProvider
+            serviceProvider,
         } = req.body;
 
         let orderId = uuid.v4().toString();
@@ -117,10 +118,10 @@ deliveryController.generateOrder = async (req, res, next) => {
 
         let service = await deliveryService(serviceProvider);
 
+        let currentWayBill = await service.createWayBill()
 
         for (let i = 0; i < shipments.length; i++) {
             let currentShipment = shipments[i];
-            let currentWayBill = await service.createWayBill()
             let ship = {
                 "waybill": currentWayBill,
                 "weight": currentShipment.weight,
@@ -151,11 +152,13 @@ deliveryController.generateOrder = async (req, res, next) => {
 
 
 
-        if(serviceProvider === 'DTDC') {
+        if (serviceProvider === 'DTDC') {
             let saveOrderObj = {
                 pickUpLocation: "GAINT LOGISTIC",
                 clientId: req.user._id,
-                shipments: allShipments
+                shipments: allShipments,
+                serviceType: serviceProvider,
+                orderId
 
             }
             let order = await service.createOrder(allShipments, saveOrderObj);
@@ -195,11 +198,17 @@ deliveryController.generateOrder = async (req, res, next) => {
                     let saveOrderObj = {
                         pickUpLocation: "GAINT LOGISTIC",
                         clientId: req.user._id,
-                        shipments: allShipments
-
+                        shipments: allShipments,
+                        serviceType: serviceProvider,
+                        orderId
                     }
                     await dao.create({ model: orders, obj: saveOrderObj });
-                    await dao.insert({ model: shipments, docArray: allShipments });
+                    await dao.insert({
+                        model: model.shipments,
+                        docArray: allShipments
+                        
+
+                    });
 
 
 
@@ -209,7 +218,8 @@ deliveryController.generateOrder = async (req, res, next) => {
                     });
 
                 } catch (error) {
-                    let orderstatus = await service.cancelOrder(waybill)
+                    console.log("error", error)
+                    let orderstatus = await service.cancelOrder(currentWayBill)
 
                     //if some error occurs after creating order  then cancel the order
                     if (!!orderstatus.status) {

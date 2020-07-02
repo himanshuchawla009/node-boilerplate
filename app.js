@@ -28,9 +28,9 @@ app.use((err, req, res, next) => {
   const status = err.status ? err.status : 500;
   console.error('ERROR -> ', error);
   if (env === 'staging' || env === 'production') {
-    resObj = { success: false, description: typeof err === 'object' ? err.message : err, message: 'Something broke!' };
+    resObj = { success: false, description: typeof err === 'object' ? err.message : err, message: !!err.message ?  err.message : 'Something broke!' };
   } else {
-    resObj = { success: false, description: err.message, message: 'Something broke!', error };
+    resObj = { success: false, description: err.message, message: !!err.message ?  err.message : 'Something broke!', error };
 
   }
 
