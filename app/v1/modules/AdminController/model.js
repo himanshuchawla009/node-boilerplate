@@ -8,6 +8,24 @@ var clientAccessSchema = new Schema({
         type: String,
         required: true
     },
+    clientEmail:{
+        type: String,
+        required: true
+    },
+    password:{
+        type: String,
+        required: true
+    },
+    approved:{
+        type: String,
+        required: true,
+        default:false
+    },
+    blocked:{
+        type: String,
+        required: true,
+        default: false
+    },
     apiKey: {
         type: String,
         required: true

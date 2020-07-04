@@ -1,0 +1,38 @@
+[32m2020-07-04T15:38:28.180Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-04T15:38:28.185Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-04T15:38:46.008Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-04T15:38:46.011Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-04T15:39:54.504Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 11.143 ms - 172[0m[39m
+[32m[39m
+[32m2020-07-04T15:40:09.238Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 1.875 ms - 163[0m[39m
+[32m[39m
+[32m2020-07-04T15:40:19.832Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 1.373 ms - 168[0m[39m
+[32m[39m
+[32m2020-07-04T15:41:04.789Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-04T15:41:04.792Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-04T15:41:06.379Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-04T15:41:06.381Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-04T15:41:09.078Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 21.369 ms - 131[0m[39m
+[32m[39m
+[32m2020-07-04T15:41:16.887Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 8.660 ms - 66[0m[39m
+[32m[39m
+[32m2020-07-04T15:41:21.243Z - info: [0mPOST /api/v1/admin/generateClient [32m200[0m 239.012 ms - 104[0m[39m
+[32m[39m
+[32m2020-07-04T15:41:53.593Z - info: [0mPOST /api/v1/client/register [33m400[0m 8.032 ms - 163[0m[39m
+[32m[39m
+[32m2020-07-04T15:42:03.900Z - info: [0mPOST /api/v1/client/register [33m400[0m 4.063 ms - 66[0m[39m
+[32m[39m
+[32m2020-07-04T15:42:46.926Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-04T15:42:46.928Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-04T15:42:49.262Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-04T15:42:49.264Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-04T15:42:52.456Z - info: [0mPOST /api/v1/client/register [33m400[0m 13.287 ms - 67[0m[39m
+[32m[39m
+[32m2020-07-04T15:42:59.484Z - info: [0mPOST /api/v1/client/register [32m200[0m 168.760 ms - 114[0m[39m
+[32m[39m
+[32m2020-07-04T15:43:26.988Z - info: [0mPOST /api/v1/client/login [32m200[0m 140.860 ms - 264[0m[39m
+[32m[39m
+[32m2020-07-04T15:43:32.278Z - info: [0mPOST /api/v1/client/login [33m401[0m 132.135 ms - 55[0m[39m
+[32m[39m
+[32m2020-07-04T15:43:38.932Z - info: [0mPOST /api/v1/client/login [33m401[0m 4.745 ms - 55[0m[39m
+[32m[39m

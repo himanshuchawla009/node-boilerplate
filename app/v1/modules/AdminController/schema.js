@@ -4,6 +4,7 @@ module.exports = {
     generateClient: {
         body: Joi.object().keys({
             clientName: Joi.string().required(),
+            clientEmail: Joi.string().required(),
             pincode: Joi.number().required(),
             city: Joi.string().required(),
             address: Joi.string().required(),

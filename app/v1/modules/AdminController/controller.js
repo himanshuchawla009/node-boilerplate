@@ -3,6 +3,7 @@
  */
 const boom = require("boom"),
     uuid = require('uuid'),
+    bcrypt = require('bcryptjs')
     dao = require('./dao'),
     { clients } = require('./model'),
     { pickups, wayBills, pincodes } = require('../DeliveryController/model'),
@@ -19,22 +20,23 @@ adminController.createClient = async (req, res, next) => {
          * saving new client along with api key in db
          * 
          */
-        let { clientName, pincode, city, address, state, country, phone } = req.body;
-        console.log(clientName, "name")
+        let { clientEmail,clientName, pincode, city, address, state, country, phone } = req.body;
 
-        let clientDetails = await dao.findOne({ model: clients, params: { name: clientName } });
-        console.log(clientDetails, "details")
+        let clientDetails = await dao.findOne({ model: clients, params: { clientEmail: clientEmail } });
         if (!!clientDetails) {
             return res.status(400).json({
                 success: false,
-                message: "Client with this name already exists"
+                message: "Client with this email already exists"
             });
 
         }
+        let password = uuid.v4();
 
         let key = uuid.v4();
+        const hash = await bcrypt.hash(password, 10);
 
         let client = {
+            clientEmail,
             name: clientName,
             apiKey: key,
             pincode,
@@ -42,7 +44,10 @@ adminController.createClient = async (req, res, next) => {
             address,
             state,
             country,
-            phone
+            phone,
+            approved: true,
+            blocked:false,
+            password : hash
         }
         console.log("client", client)
 
@@ -64,6 +69,7 @@ adminController.createClient = async (req, res, next) => {
     }
 
 };
+
 
 adminController.fetchClientApiKey = async (req, res, next) => {
     try {
