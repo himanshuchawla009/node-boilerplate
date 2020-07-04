@@ -1,8 +1,19 @@
 const controller = require("./controller"),
     { celebrate } = require('celebrate'),
-    validateSchema = require("./schema");
-
-
+    validateSchema = require("./schema"),
+    uuid = require('uuid'),
+    path = require('path');
+var multer = require('multer')
+var storage = multer.diskStorage({
+    destination: function (req, file, cb) {
+      cb(null, 'uploads/')
+    },
+    filename: function (req, file, cb) {
+      cb(null, Date.now() + path.extname(file.originalname)) //Appending extension
+    }
+  })
+  
+  var upload = multer({ storage: storage });
 
 
 module.exports = function (router) {
@@ -19,5 +30,10 @@ module.exports = function (router) {
         controller.login
     );
 
-	
+    router.post('/client/uploadShipmentsExcel',
+        upload.single('excel'),
+        controller.uploadShipmentsExcel
+    );
+
+
 }

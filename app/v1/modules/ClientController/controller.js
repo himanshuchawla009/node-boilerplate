@@ -9,7 +9,7 @@ const boom = require("boom"),
     logger = require("../../../../config/logger");
 const presets = require("../../../../utils/presets");
 const jwt = require('jsonwebtoken');
-
+const xlsxFile = require('read-excel-file/node');
 
 
 clientController = Object.create(null);
@@ -23,7 +23,7 @@ clientController.register = async (req, res, next) => {
          */
         let { clientName, clientEmail, pincode, city, address, state, country, phone, password } = req.body;
 
-        let clientDetails = await dao.findOne({ model: clients, params: {  clientEmail: clientEmail } });
+        let clientDetails = await dao.findOne({ model: clients, params: { clientEmail: clientEmail } });
         if (!!clientDetails) {
             return res.status(400).json({
                 success: false,
@@ -69,6 +69,7 @@ clientController.register = async (req, res, next) => {
     }
 
 };
+
 
 clientController.login = async (req, res, next) => {
     try {
@@ -120,5 +121,35 @@ clientController.login = async (req, res, next) => {
     }
 
 };
+
+clientController.uploadShipmentsExcel = async (req, res, next) => {
+    try {
+        console.log("file", req.file)
+
+        if(!!req.file) {
+            let rows = await xlsxFile(req.file.path);
+            console.log(rows);
+            for(let r = 1; r < rows.length; r++) {
+
+                let order = row[r];
+                
+            }
+            return res.status(200).json({
+                success: true,
+                message: "Shipments file uploaded successfully"
+            });
+        } else {
+            return res.status(400).json({
+                success: false,
+                message: "Please upload a valid file"
+            });
+        }
+       
+    }
+    catch (err) {
+        logger.error(err);
+        return next(boom.badImplementation(err));
+    } 
+}
 
 module.exports = clientController;
