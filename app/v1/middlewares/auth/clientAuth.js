@@ -1,6 +1,9 @@
 const { clients } = require('../../modules/AdminController/model');
 const dao = require('../../modules/AdminController/dao');
 
+const bcrypt = require('bcryptjs');
+const presets = require("../../../../utils/presets");
+const jwt = require('jsonwebtoken');
 
 const authenticateClient = async (req, res, next) => {
     try {
