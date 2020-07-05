@@ -140,7 +140,7 @@ module.exports = function (router) {
 	);
 
 
-	router.get('/delivery/cancelOrder/:waybill',
+	router.get('/delivery/cancelOrder/:waybill/:serviceProvider',
 		authenticateClient,
 		controller.cancelOrder
 	);
