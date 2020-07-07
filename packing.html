@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Title of the document</title>
+	<style>
+		table {
+			width: 600px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		th,
+		td {
+			padding: 10px;
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		.center {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center
+
+		}
+		.space-between {
+			display: flex;
+			flex-direction: row;
+			justify-content: space-between;
+		}
+		.column-flex {
+			display: flex;
+			flex-direction: column
+		}
+		.column-center {
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center
+		}
+	</style>
+</head>
+
+<body>
+	<table>
+		<tr>
+			<td>
+				GAINT LOGISTICS
+			</td>
+			<td>
+				<img src="https://track.delhivery.com/static/images/new_logo.png" />
+			</td>
+		</tr>
+
+	</table>
+	<table>
+		<tr>
+
+			<td>
+				<div class="center">
+						<img style
+						src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOkAAAB6CAIAAADVp+NZAAAQXElEQVR4nO2be1AT1xrAT8gDpUF5FhBEUB6C0AFDtKJIOwW1AZ3asSCCgq2NYkWliNqqHR84vhir9uGg1kctamdqUREVpI6WNkobQIQG5NUBUxB5RN4Jks39Y+/d2dlNNgjee+fMfL+/4Ntvv/325Mfu2bMBGUYE+g9KpVKpVCKEsrKyyE1ZWVlknLELGUcISSQSeh25XE7+TNahIOMSiYTMl8vl9K3UcRkw+jFVn31GVH1GPnVeJFQ/7HGg16HvYnR82ONgtA57HNjjSUKd70uNw/D7p8bN6OfLrsOIU+dL1Tc6Di+FBfs0AAALwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AV8BdAFfAXQBXwF0AVwQj283S0pL8gcfjkb/y+XwywufzLS0tyTgdMo4QEolE9DoCgYAqRZVFCJFxKlkgENC3UsdlHIXRD0d9BlR9Rj51XiT05tnjwO6TXcfUOJiqwxgHCqoO9Su7zvDHwWz/jOMyPl92/4w4dQpUfaPj8FLwDAbDyPYEgP8vMGcAcGWEcwajqFSqK1euODg4yOVys8lKpfLy5csVFRWdnZ0Gg+Gjjz5atWoVPYEgiIKCgtzcXJVKpdfrg4KCUlJSvL29OWoODAwUFxffv3//8ePHZ8+e5W5Aq9UeP3789u3b3d3d3t7e69evDw4ONpWs1+sfPXr04MGDBw8e7Ny509PTk7v4lStXLl68qFarHRwc4uLili5dypFcVFR06tSpurq68ePHR0dHy+Vy6v7OoKqq6syZM6WlpVqt1tPT87333nv//ffZ0zMGg4ODmZmZCKENGza89tprjK1arfbw4cMcu6empo4dO5YRLC0t/e6778rLy1+8eDF16tQPP/wwPDzcVAW9Xn/69Onc3NyOjg53d3e5XP72229z9zwsDK8IrVYbGBgoEon8/Py4M1taWubPn48QsrGxkclkiYmJCQkJly9fpuc8efIkICCAz+fPnTt39erV8fHxjo6OIpEoNzfXaM0dO3YEBQVZWPz7NuLq6srdQ19fn0QiEQgE0dHRK1ascHd35/P5P//8MzvzwoULb731Fn1OVllZyV1806ZNCCGpVLpy5UqpVIoQWrdunank48eP83g8f3//lStXkp+oTCYbGhpipOn1+pSUFISQk5PTsmXL5HJ5SEgIQigiIqKvr4+7n1WrVpH9t7a2srd2dnaSn4UTC2tra4RQe3s7Y5dvv/2Wx+NNmjQpISEhLi7O2dkZIZSZmWn06ARBREdHW1hYREZGJiUl+fj48Hi8rKws7p6HwytzNz093dPTUy6Xc7tbX1/v4uLi5uZ26dIlgiBMpfX29qampra0tNAjERERdnZ2Rj+quXPnyuXyEydOlJaWbt++3ay76enpVlZWxcXF5K86nS42NtbGxoa8CdBJS0tbunRpZmbm3bt3CwsLzbpL5hw+fJiKZGVlIYSuX7/OTq6pqeHz+evWraOG4ubNm0Kh8MiRI4zMEydOIIRWrFih1WqpYF5enqWl5dq1azn6yc3NFYlEu3fv5nbXaHvLly/38PDQ6/X0YGNjo1AoXLt2LdXzixcvEhMTBQLBkydP2EWOHj1qYWGRl5dH/koQxIYNG4RC4ePHjznaHg6vxt179+4JhcKioqK0tDQOd/v6+jw9PQMDAzs6OkZwlKqqKoTQ7du3udN27drF7a5Wq7W2tt61axc9+Pz5c2tr64yMDI4d79+/b9ZdmUwWGhrKCM6bNy8sLIydvH79+okTJw4ODtKDycnJbm5ujMyvv/5aKBT29vYy4vv37x8zZszAwIDRZtra2pydnfft23ft2jUOd4VCIeUWRVdXl5WV1RdffMGIZ2VlCYXCnp4eerCnp8fS0vL48eOMZIIg3Nzc5HI5PfjixQt3d/fk5GSjPQ+fV/Cs1tPTk5SU9Omnn86ZM4c788CBA2q1+urVq3Z2diM40Ouvv44Q6u/vH0mXNO7du9fT05OQkEAPjh8/fuHChTdu3BhN5cHBwcLCQkZlhNCyZct+//33rq4uRvzGjRsxMTFCoZAejI+PV6vVDx8+pAc/+eQTnU7Hnq1GRkZqtdrGxkaj/axZs2bKlCnp6ekcPdva2g4ODspkMkb8xx9/HBgYSExMZMS7urrEYrFYLKYHxWKxjY0N+wSrqqrUanV8fDw9KBAIYmNjRznU6JWsM6Smpo4bN468K3FAEMQ333yzZs0asw86prhw4QKPxwsKChrZ7hQVFRW2traTJ09mxCUSSUVFxWgq19TUDA4OknNcOiEhIQRBqFQqenBgYKC+vp6dLJFIeDweuxOjz2TPnj1DCNnb27M3nT9/vqCg4Pvvv2csUQ+Ts2fPhoeHs0dp2rRpGo2mtLSUHlQoFK2trdOmTWMkV1RU8Hg8cmpOJyQkpLGxsbu7ewSNUYx2nSE3Nzc7O/vPP/80u8JcWVnZ0dERGxtLEERhYWFZWRlBEBKJJCIignrGMsWTJ09Onz6dkZGxceNGd3f3Ufbc3Nw8adIkdtzV1bWnp6e/v9/KymrElRFCEydOZFdGCD19+pSRbDAY2Mljxoyxs7NrbW01e7ihoaG9e/fOmzfPwcGBsampqSklJeXw4cNs+YZDdXW1QqEwulazYMGC2bNnL1y4cN++fWFhYQRB3Llz5/PPPw8NDWVfvJubm+3t7dnjSQ5Ia2vruHHjRtAeyajcbWtr+/jjjzMyMgICAswmV1dXI4Ts7e1DQkLKysqcnJz6+vp6e3ulUmlubq6Tk5OpHSUSCflXHhwcvHPnztE0TELO5Nhx8o6s0+lG7C5502TvTkYGBweHk0x2otPpuI9FEERcXFxVVVVZWRl708qVK8PDwxnLjsPn7Nmz1tbWS5YsYW8iH7ymTZtGn064u7vn5OSwr0FdXV3seQ76z1mbPUduRjVnWL16tZ+fX2pq6nCSNRqNSCSaP3++RCJpbGx8+vRpd3f39evXm5qaYmNjOXZMT08/ePCgXC5vbm728vJSKpWj6RkhJBAIGBqR6PV6hBBj9vmylRHLUVOVTSWT+dxt9Pf3y2SyW7duFRQUsK/cX331VWVlJbk0MQL0ev358+c/+OADo9pptVqZTPb8+fN169ZlZ2dfuHBh48aNHR0doaGhLS0tjGQ+n/9fGmo0muvu5cuXc3JyEhISduzYQQV/++23tra2bdu2IYTI52VqE3kacrmc3IoQ4vF4UVFR586dW7BgQVlZmalXA9TCfmZmpkwmW7ZsWU1NzYjbRgg5Ojoybt8knZ2dIpHI6Ac2TMh7d2trK2MCqtFoEEK2trbsZKOdaDQaRjKdhoaGxYsXazSa8vJy9pSgubl58+bNb7755rFjx6hgbW0tQmjfvn1WVlYLFiwICwvjOIv8/Pzm5uakpCSjWw8dOvTo0SOlUjl16lQyEhcXl5KSMmPGjK1bt547d46e7Ojo+OzZs6GhIcbbFqMD8rKM3N2Ojo7JkycrFAqFQkEP9vf3X7p0CSEUExNDd5e8PKxdu5ZRJzIy0tLSsry8nOO1Fom1tTU5x6qrq/Py8hpx5z4+Pv/88093dzdjslVbW+vp6Wn2NRUHvr6+CCGVSuXv70+Pk39sjIdUFxcXa2vrqqqqRYsW0eNqtbq/v9/UPDUvL2/58uVSqbSoqMjoZLGtrc3NzU2tVpOfAgm5OJOTk8Pn8z08PLjdPXPmjJeXl6lVo2vXrsXFxVHikkyePHnNmjXs+bGPj49er6+trfXz86PHa2pqxGIxuXA0cka5xsaAY31Xo9Hw+fwffviBEdfpdEKhMDs7ezj1yRXW6upqjhyz67t///03MrYaL5VKExMTzR6de33X19c3JSWFEdy+fbuzszM7WSaTyWQyRvDMmTN8Pv/58+eMuF6v37lzJ5/P37p1K/W+oLe3V6FQmH21xrG+y6C9vd3S0nLPnj2mEgIDAzdv3syO79+/38XFhRHs7e0ViUTst2iLFy9+5513zDbDzf/OXYPBkJSU5O3t3dXVRQ+ePHmSz+c3NTXRg0ZfuQ0NDUVFRU2YMIHxpoeBWXcNBkNYWFh4eDg98ssvvyCEbt68ybHXcNzNyMiwsbGhvxHs6OhwdHRMTU1lJ1+8eFEgEDx8+JCK6HS6gICARYsWMTI7OzujoqKsrKwuXrxIj5eUlJhtyfAy7h47dszCwqKxsdFUQnJysq+vb39/Pz2o1WqDgoJiYmLY+XFxcX5+fvTXgZWVlQKB4NSpU2ab4ebVfAeyrq4uLy8PIXT16lWVSvXZZ58hhJYuXcpYPejs7JRKpWPHjt2zZ8/06dO7u7tzcnL27t2bnJx85MgRemZGRsatW7eio6NnzpxJvnkqKys7evRoSUnJTz/9tHjxYkYDWVlZWq2W/Dk/P1+hUOzatYvayu6kuLg4NDT03Xff3bJli5OTU1FRUXp6ulQqzc/PZ1S+efMmNb1ubGz88ssvt27dSr7BRwjNmjVrxowZ9Py+vr433niDz+cfPHgwICCgrq5uy5YtLS0tlZWV7FukwWAICwt7/PjxoUOHQkNDnz59unv37l9//bWkpCQwMJCe6eXlVV9fv2nTJvo0DCGkVqszMzMrKyvZa6sIoYGBAfKJ7a+//jp58mRGRoZYLJ4zZ45EImEnk0yfPt3BwaGgoMBUglqtDg4OnjBhQlpa2vTp08m/vczMzJqamj/++IMxl0AINTQ0BAUF+fv779mzx8PDo6ysLC0tzd7eXqlUmvrK0XAZpfskV65cEbNQKpXszNbW1iVLllCLKWPHjt22bRv7KtvQ0LB69WqGcLNnz757967RBlxdXdkNUJSUlLB3uXHjhouLC1U8JiaG/cbVYDAkJiZyVD5w4AB7l4aGhpkzZ1KVg4KCVCqVqaHTaDT0+e6kSZPu3LnDTuPoQSwWm6rf3t7OTmZ/WYJCpVKJxWLGpZ1NbW1tREQE/aOZNWsW/e7BQKFQeHh4UMmRkZH0+9KI+f9897ytrY28cQQHBzPeLjJobm5uamrS6XQ+Pj501V4JBEGUl5d3d3f7+vpSl9JXRX19vVqtdnJyYl+K2KjV6rq6Ojs7u8DAwNE8LP4vaWlpqa6uJgjCx8eHvU7HwGAwkN93nTJlitnkYQL/NwHgCvzfBIAr4C6AK+AugCv/Arj2g8+mc2YkAAAAAElFTkSuQmCC" />
+	
+				</div>
+				<div class="space-between">
+						<h2>
+							201202
+						</h2>
+						<h2>
+							NOI/SCI
+						</h2>
+				</div>
+			</td>
+
+		</tr>
+	</table>
+	<table>
+			<tr>
+	
+				<td>
+					<div class="columnFlex">
+
+						<h2>SHIPPING ADDRESS</h2>
+						<h4>Any address</h4>
+							
+		
+					</div>
+					
+				</td>
+				<td>
+						<div className="columnCenter">
+								
+								<h2>COD</h2>
+								<h4>1.00</h4>
+									
+						</div>
+						
+					</td>
+	
+			</tr>
+		</table>
+
+</body>
+
+</html>

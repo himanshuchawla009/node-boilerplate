@@ -7,7 +7,7 @@ const boom = require("boom"),
     dao = require('./dao'),
     uuid = require('uuid'),
     { orders, pickups } = require('./model');
-    model = require('./model');
+model = require('./model');
 
 
 let DELIVERY_SERVICE_NAME = "DELHIVERY";
@@ -206,7 +206,7 @@ deliveryController.generateOrder = async (req, res, next) => {
                     await dao.insert({
                         model: model.shipments,
                         docArray: allShipments
-                        
+
 
                     });
 
@@ -268,12 +268,24 @@ deliveryController.generatePackingSlip = async (req, res, next) => {
                 success: false,
                 message: "No packages found for sent waybill number"
             });
-        } else {
-            return res.status(200).json({
-                success: true,
-                data: slips
-            });
-        }
+        } 
+        var fs = require('fs');
+        var pdf = require('html-pdf');
+        var html = fs.readFileSync('./packing.html', 'utf8');
+        var options = { format: 'Letter' };
+
+        pdf.create(html, options).toFile('./businesscard.pdf', function (err, result) {
+            if (err) {
+                return res.status(500).json({
+                    success: false,
+                    message: "Unable to generate pdf of packaging slip"
+                });
+            }
+            console.log(result, "pdf file"); // { filename: '/app/businesscard.pdf' }
+            res.download(`./businesscard.pdf`);
+
+        });
+
 
 
 
@@ -552,6 +564,7 @@ deliveryController.getPickupById = async (req, res, next) => {
     }
 
 };
+
 
 
 module.exports = deliveryController;

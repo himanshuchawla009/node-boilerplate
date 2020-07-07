@@ -1,0 +1,20 @@
+[32m2020-07-05T18:24:02.412Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-05T18:24:02.415Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-05T18:26:04.937Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [33m400[0m 19.993 ms - 45[0m[39m
+[32m[39m
+[32m2020-07-05T18:26:17.037Z - info: [0mPOST /api/v1/admin/generateClient [33m400[0m 50.955 ms - 67[0m[39m
+[32m[39m
+[32m2020-07-05T18:26:20.845Z - info: [0mGET /api/v1/admin/fetchClientKey/ekta%20auto [32m200[0m 7.548 ms - 64[0m[39m
+[32m[39m
+[31m2020-07-05T18:26:35.889Z - error: Cannot find module 'html-pdf'[39m
+[32m2020-07-05T18:26:35.894Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [31m500[0m 506.355 ms - 567[0m[39m
+[32m[39m
+[32m2020-07-05T18:27:43.842Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-05T18:27:43.844Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-05T18:27:53.653Z - error: ENOENT: no such file or directory, open 'home/himanshu/Downloads/packing.html'[39m
+[32m2020-07-05T18:27:53.662Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [31m500[0m 519.416 ms - 525[0m[39m
+[32m[39m
+[32m2020-07-05T18:29:05.033Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-05T18:29:05.037Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-05T18:29:10.506Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1198.082 ms - 10246[0m[39m
+[32m[39m

@@ -204,7 +204,7 @@ adminController.addWayBill = async (req, res, next) => {
         await dao.create({
             model: wayBills, obj: {
                 service,
-                waybill
+                wayBill:waybill
             }
         });
 
@@ -245,11 +245,11 @@ adminController.fetchWayBills = async (req, res, next) => {
             params['allotedOrderId'] = allotedOrderId
         }
 
-        let wayBills = await dao.find({ model: wayBills, params });
+        let wayBillsData = await dao.find({ model: wayBills, params });
 
         return res.status(200).json({
             success: true,
-            data: waybills
+            data: wayBillsData
         });
 
     }

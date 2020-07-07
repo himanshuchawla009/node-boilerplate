@@ -1,0 +1,53 @@
+[32m2020-07-07T15:26:17.514Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-07T15:26:17.517Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-07T15:28:46.958Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-07T15:28:46.961Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-07T15:29:07.469Z - info: [0mPOST /api/v1/admin/login [33m401[0m 19.153 ms - 55[0m[39m
+[32m[39m
+[32m2020-07-07T15:29:20.735Z - info: [0mPOST /api/v1/admin/login [33m401[0m 182.320 ms - 55[0m[39m
+[32m[39m
+[32m2020-07-07T15:29:31.891Z - info: [0mPOST /api/v1/admin/login [33m401[0m 206.275 ms - 55[0m[39m
+[32m[39m
+[32m2020-07-07T15:29:44.842Z - info: [0mPOST /api/v1/admin/login [33m401[0m 156.843 ms - 55[0m[39m
+[32m[39m
+[32m2020-07-07T15:29:56.485Z - info: [0mPOST /api/v1/admin/login [32m200[0m 167.158 ms - 278[0m[39m
+[32m[39m
+[32m2020-07-07T15:30:04.670Z - info: [0mPOST /api/v1/rate/calculate [33m400[0m 7.002 ms - 45[0m[39m
+[32m[39m
+[32m2020-07-07T15:30:17.545Z - info: [0mPOST /api/v1/rate/calculate [33m401[0m 8.235 ms - 51[0m[39m
+[32m[39m
+[32m2020-07-07T15:30:53.388Z - info: [0mPOST /api/v1/rate/calculate [33m401[0m 0.358 ms - 62[0m[39m
+[32m[39m
+[32m2020-07-07T15:31:58.203Z - info: [0mPOST /api/v1/admin/addWayBill [33m400[0m 4.421 ms - 165[0m[39m
+[32m[39m
+[31m2020-07-07T15:32:04.982Z - error: WayBills validation failed: wayBill: Path `wayBill` is required., service: `DELHIVERY` is not a valid enum value for path `service`.[39m
+[32m2020-07-07T15:32:05.003Z - info: [0mPOST /api/v1/admin/addWayBill [31m500[0m 20.340 ms - 1345[0m[39m
+[32m[39m
+[32m2020-07-07T15:33:25.309Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-07T15:33:25.313Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-07T15:33:30.740Z - error: WayBills validation failed: wayBill: Path `wayBill` is required.[39m
+[32m2020-07-07T15:33:30.755Z - info: [0mPOST /api/v1/admin/addWayBill [31m500[0m 33.986 ms - 1141[0m[39m
+[32m[39m
+[32m2020-07-07T15:33:47.452Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-07T15:33:47.455Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-07T15:33:56.646Z - info: [0mPOST /api/v1/admin/addWayBill [32m200[0m 79.144 ms - 56[0m[39m
+[32m[39m
+[32m2020-07-07T15:34:16.363Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-07T15:34:16.368Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-07T15:34:40.717Z - info: [0mPOST /api/v1/admin/fetchWayBills [33m404[0m 8.009 ms - 48[0m[39m
+[32m[39m
+[31m2020-07-07T15:34:48.295Z - error: wayBills is not defined[39m
+[32m2020-07-07T15:34:48.308Z - info: [0mGET /api/v1/admin/fetchWayBills [31m500[0m 18.354 ms - 3440[0m[39m
+[32m[39m
+[32m2020-07-07T15:35:15.134Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-07T15:35:15.137Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-07T15:35:19.173Z - info: [0mGET /api/v1/admin/fetchWayBills [32m200[0m 20.295 ms - 248[0m[39m
+[32m[39m
+[32m2020-07-07T15:39:49.030Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-07T15:39:49.033Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-07T15:40:21.506Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1407.794 ms - 31587[0m[39m
+[32m[39m
+[32m2020-07-07T15:43:15.815Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-07T15:43:15.818Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-07T15:43:22.739Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1200.642 ms - 31587[0m[39m
+[32m[39m

@@ -32,7 +32,7 @@ module.exports = {
     },
     addWayBill: {
         body: Joi.object().keys({
-            service: Joi.string().required(),
+            service: Joi.string().valid("DTDC").required(),
             waybill: Joi.string().required()
 
         })
