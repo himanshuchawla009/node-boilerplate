@@ -6,7 +6,7 @@ const boom = require("boom"),
     bcrypt = require('bcryptjs')
     dao = require('./dao'),
     { clients } = require('./model'),
-    { pickups, wayBills, pincodes } = require('../DeliveryController/model'),
+    { pickups, wayBills, pincodes, orders } = require('../DeliveryController/model'),
     logger = require("../../../../config/logger");
 
 
@@ -357,6 +357,29 @@ adminController.getAllUsers = async (req, res, next) => {
 
 };
 
+
+adminController.getOrders = async (req, res, next) => {
+    try {
+
+       
+        let allOrders = await dao.find({
+            model: orders, params: {}
+        });
+
+        return res.status(200).json({
+            success: true,
+            data: allOrders
+        })
+
+
+
+    }
+    catch (err) {
+        logger.error(err);
+        return next(boom.badImplementation(err));
+    }
+
+};
 
 
 module.exports = adminController;

@@ -105,4 +105,12 @@ module.exports = function (router) {
 		authenticateAdmin,
 		controller.getAllUsers
 	);
+
+
+	router.get('/admin/getOrders',
+		authenticateAdmin,
+		controller.getOrders
+	);
+
+	
 }
