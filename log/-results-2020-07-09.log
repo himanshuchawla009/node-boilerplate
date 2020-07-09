@@ -1,2 +1,8 @@
 [32m2020-07-09T08:55:50.816Z - info: ✅ Mongodb Connected[39m
 [32m2020-07-09T08:55:50.818Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-09T16:45:07.626Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-09T16:45:07.628Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-09T16:45:32.818Z - info: [0mPOST /api/v1/delivery/generatePickupRequest [32m200[0m 58.204 ms - 67[0m[39m
+[32m[39m
+[32m2020-07-09T16:45:44.183Z - info: [0mGET /api/v1/delivery/getPickups [32m200[0m 45.923 ms - 502[0m[39m
+[32m[39m

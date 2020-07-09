@@ -29,6 +29,10 @@ const authenticateClient = async (req, res, next) => {
             console.log(decoded, "decoded")
             if (decoded.userType === 'client') {
                 req.userData = decoded;
+                let clientDetails = await dao.findOne({ model: clients, params: { _id : decoded.userId } });
+
+                
+                req.user = clientDetails
                 next();
             } else {
                 return res.status(401).json({
