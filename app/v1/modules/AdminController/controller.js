@@ -167,6 +167,32 @@ adminController.updateShipmentStatus = async (req, res, next) => {
 
 };
 
+adminController.getPickups = async (req, res, next) => {
+    try {
+
+        /**
+         * get pickups 
+         * 
+         */
+        let allPickups = await dao.find({
+            model: pickups, params: {}
+        });
+
+        return res.status(200).json({
+            success: true,
+            data: allPickups
+        })
+
+
+
+    }
+    catch (err) {
+        logger.error(err);
+        return next(boom.badImplementation(err));
+    }
+
+};
+
 adminController.updatePickupRequest = async (req, res, next) => {
     try {
 
