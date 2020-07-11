@@ -1,6 +1,7 @@
 const controller = require("./controller"),
     { celebrate } = require('celebrate'),
     validateSchema = require("./schema"),
+    { authenticateClient } = require('../../middlewares/auth/clientAuth');
     uuid = require('uuid'),
     path = require('path');
 var multer = require('multer')
@@ -34,6 +35,11 @@ module.exports = function (router) {
         upload.single('excel'),
         controller.uploadShipmentsExcel
     );
+
+    router.get('/client/getShipmentsSummary',
+		authenticateClient,
+		controller.getShipmentSummary
+	);
 
 
 }

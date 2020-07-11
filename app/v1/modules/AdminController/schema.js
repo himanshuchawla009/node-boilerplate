@@ -58,7 +58,7 @@ module.exports = {
         body: Joi.object().keys({
             shipmentId: Joi.string().required(),
             serviceProvider: Joi.string().valid("DTDC", "DELHIVERY"),
-            status: Joi.string().valid("PICK_UP_REQUEST_CREATED", "PICK_UP_REQUEST_ACCEPTED", "PICKED_UP_BY_GAINT_LOGISTICS", "PICKED_UP_BY_DELIVERY").required(),
+            status: Joi.string().valid("PICK_UP_REQUEST_CREATED", "PICK_UP_REQUEST_ACCEPTED", "PICKED_UP_BY_GAINT_LOGISTICS", "PICKED_UP_BY_DELIVERY","CANCELLED").required(),
 
 
         })

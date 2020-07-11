@@ -126,13 +126,13 @@ clientController.uploadShipmentsExcel = async (req, res, next) => {
     try {
         console.log("file", req.file)
 
-        if(!!req.file) {
+        if (!!req.file) {
             let rows = await xlsxFile(req.file.path);
             console.log(rows);
-            for(let r = 1; r < rows.length; r++) {
+            for (let r = 1; r < rows.length; r++) {
 
                 let order = row[r];
-                
+
             }
             return res.status(200).json({
                 success: true,
@@ -144,12 +144,58 @@ clientController.uploadShipmentsExcel = async (req, res, next) => {
                 message: "Please upload a valid file"
             });
         }
-       
+
     }
     catch (err) {
         logger.error(err);
         return next(boom.badImplementation(err));
-    } 
+    }
 }
 
+
+
+clientController.getShipmentSummary = async (req, res, next) => {
+    try {
+
+        /**
+         * get pickups 
+         * 
+         */
+        let serviceProviders = await orders.aggregate([
+            { $match: { clientId: req.user._id } },
+            { $group: { _id: { serviceType: '$serviceType' }, total: { $sum: 1 } } },
+            { $project: { serviceType: '$_id.serviceType', total: '$total', _id: 0 } }
+        ])
+
+        let pickupsSummary = await pickups.aggregate([
+            { $match: { clientId: req.user._id } },
+            { $group: { _id: { status: '$status' }, total: { $sum: 1 } } },
+            { $project: { status: '$_id.status', total: '$total', _id: 0 } }
+        ])
+
+        let shipmentsSummary = await orders.aggregate([
+            { $match: { clientId: req.user._id } },
+            { $group: { _id: { status: '$status' }, total: { $sum: 1 } } },
+            { $project: { status: '$_id.status', total: '$total', _id: 0 } }
+        ])
+
+
+        return res.status(200).json({
+            success: true,
+            data: {
+                serviceProviders,
+                pickupsSummary,
+                shipmentsSummary
+            }
+        })
+
+
+
+    }
+    catch (err) {
+        logger.error(err);
+        return next(boom.badImplementation(err));
+    }
+
+};
 module.exports = clientController;

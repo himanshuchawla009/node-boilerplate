@@ -142,6 +142,7 @@ deliveryController.generateOrder = async (req, res, next) => {
                 "status": "MANIFESTED"
             };
 
+
             allShipments.push(ship)
 
         }
@@ -158,7 +159,8 @@ deliveryController.generateOrder = async (req, res, next) => {
                 clientId: req.user._id,
                 shipments: allShipments,
                 serviceType: serviceProvider,
-                orderId
+                orderId,
+                status: "CREATED"
 
             }
             let order = await service.createOrder(allShipments, saveOrderObj);
@@ -200,7 +202,8 @@ deliveryController.generateOrder = async (req, res, next) => {
                         clientId: req.user._id,
                         shipments: allShipments,
                         serviceType: serviceProvider,
-                        orderId
+                        orderId,
+                        status: "CREATED"
                     }
                     await dao.create({ model: orders, obj: saveOrderObj });
                     await dao.insert({
@@ -268,7 +271,7 @@ deliveryController.generatePackingSlip = async (req, res, next) => {
                 success: false,
                 message: "No packages found for sent waybill number"
             });
-        } 
+        }
         var fs = require('fs');
         var pdf = require('html-pdf');
         var html = fs.readFileSync('./packing.html', 'utf8');
@@ -456,16 +459,30 @@ deliveryController.getOrders = async (req, res, next) => {
          * track order using waybill number
          * 
          */
+        const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
+            limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
+
+
         console.log(req.user._id, "client id");
-        let allOrders = await dao.find({
+        const totalCount = await dao.count({
             model: orders, params: {
                 clientId: req.user._id
             }
         });
 
+
+        let allOrders = await dao.find({
+            model: orders, params: {
+                clientId: req.user._id
+            },
+            skip: (page - 1) * limit,
+            limit: limit
+        });
+
         return res.status(200).json({
             success: true,
-            data: allOrders
+            data: allOrders,
+            totalCount
         })
 
 
@@ -486,15 +503,27 @@ deliveryController.getPickups = async (req, res, next) => {
          * get pickups 
          * 
          */
-        let allPickups = await dao.find({
+        const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
+            limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
+
+        const totalCount = await dao.count({
             model: pickups, params: {
                 clientId: req.user._id
             }
         });
 
+        let allPickups = await dao.find({
+            model: pickups, params: {
+                clientId: req.user._id
+            },
+            skip: (page - 1) * limit,
+            limit: limit
+        });
+
         return res.status(200).json({
             success: true,
-            data: allPickups
+            data: allPickups,
+            totalCount
         })
 
 

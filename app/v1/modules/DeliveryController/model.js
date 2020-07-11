@@ -24,6 +24,10 @@ var orderSchema = new Schema({
   "shipments": {
     type: Array,
     required: true
+  },
+  "status":{
+    type: String,
+    required: true
   }
 }, {
   timestamps: {
@@ -210,8 +214,10 @@ var pickUpSchema = new Schema({
     required: true
   },
   "clientId": {
-    type: String,
+    type: Schema.Types.ObjectId, 
+    ref: 'Clients',
     required: true
+
   },
   "pickupTime": {
     type: String

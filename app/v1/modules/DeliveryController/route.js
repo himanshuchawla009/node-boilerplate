@@ -52,7 +52,7 @@ module.exports = function (router) {
 	   */
 	router.get('/delivery/generateWayBill',
 		authenticateClient,
-		
+
 		controller.generateWayBill
 	);
 	/**
@@ -163,5 +163,6 @@ module.exports = function (router) {
 		authenticateClient,
 		controller.getPickupById
 	);
+
 
 }

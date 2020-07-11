@@ -4,9 +4,9 @@
 const boom = require("boom"),
     uuid = require('uuid'),
     bcrypt = require('bcryptjs')
-    dao = require('./dao'),
+dao = require('./dao'),
     { clients } = require('./model'),
-    { pickups, wayBills, pincodes, orders } = require('../DeliveryController/model'),
+    { pickups, wayBills, pincodes, orders, shipments } = require('../DeliveryController/model'),
     logger = require("../../../../config/logger");
 
 
@@ -20,7 +20,7 @@ adminController.createClient = async (req, res, next) => {
          * saving new client along with api key in db
          * 
          */
-        let { clientEmail,clientName, pincode, city, address, state, country, phone } = req.body;
+        let { clientEmail, clientName, pincode, city, address, state, country, phone } = req.body;
 
         let clientDetails = await dao.findOne({ model: clients, params: { clientEmail: clientEmail } });
         if (!!clientDetails) {
@@ -46,8 +46,8 @@ adminController.createClient = async (req, res, next) => {
             country,
             phone,
             approved: true,
-            blocked:false,
-            password : hash
+            blocked: false,
+            password: hash
         }
         console.log("client", client)
 
@@ -143,15 +143,9 @@ adminController.updateShipmentStatus = async (req, res, next) => {
 
         let { shipmentId, status, serviceProvider } = req.body;
 
-        if (serviceProvider === 'DTDC') {
-            await dao.findOneAndUpdate({ model: shipments, query: { _id: shipmentId }, params: { status } });
+        await dao.findOneAndUpdate({ model: orders, query: { _id: shipmentId }, params: { status } });
 
-        } else {
-            return res.status(400).json({
-                success: true,
-                message: "You can only update shipment status delivered by dtdc"
-            });
-        }
+
 
 
         return res.status(200).json({
@@ -174,13 +168,21 @@ adminController.getPickups = async (req, res, next) => {
          * get pickups 
          * 
          */
-        let allPickups = await dao.find({
-            model: pickups, params: {}
-        });
+        const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
+        limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
 
+        let allPickups = await dao.find({
+            model: pickups, params: {}, query:"clientId", skip: (page - 1) * limit,
+            limit: limit
+        });
+        const totalCount = await dao.count({
+            model: pickups, params: {
+            }
+        });
         return res.status(200).json({
             success: true,
-            data: allPickups
+            data: allPickups,
+            totalCount
         })
 
 
@@ -230,7 +232,7 @@ adminController.addWayBill = async (req, res, next) => {
         await dao.create({
             model: wayBills, obj: {
                 service,
-                wayBill:waybill
+                wayBill: waybill
             }
         });
 
@@ -255,8 +257,11 @@ adminController.fetchWayBills = async (req, res, next) => {
          * 
          */
 
+
         let { service, allotedUserId, allotedOrderId } = req.query;
 
+        const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
+        limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
         let params = {};
 
         if (!!service) {
@@ -271,11 +276,17 @@ adminController.fetchWayBills = async (req, res, next) => {
             params['allotedOrderId'] = allotedOrderId
         }
 
-        let wayBillsData = await dao.find({ model: wayBills, params });
+        let wayBillsData = await dao.find({ model: wayBills, params,
+            skip: (page - 1) * limit,
+            limit: limit });
 
+        const totalCount = await dao.count({
+            model: wayBills, params })
+            
         return res.status(200).json({
             success: true,
-            data: wayBillsData
+            data: wayBillsData,
+            totalCount
         });
 
     }
@@ -364,15 +375,22 @@ adminController.getAllUsers = async (req, res, next) => {
          * 
          */
 
-        let { page, limit } = req.query;
+        const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
+        limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
 
 
+        let users = await dao.find({ model: clients, params:{}, skip: (page - 1) * limit,
+        limit: limit  });
 
-        let users = await dao.find({ model: clients });
-
+        const totalCount = await dao.count({
+            model: clients, params:{}
+            
+         })
+            
         return res.status(200).json({
             success: true,
-            data: users
+            data: users,
+            totalCount
         });
 
     }
@@ -387,14 +405,24 @@ adminController.getAllUsers = async (req, res, next) => {
 adminController.getOrders = async (req, res, next) => {
     try {
 
-       
+        const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
+        limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
+
+
         let allOrders = await dao.find({
-            model: orders, params: {}
+            model: orders, params: {}, skip: (page - 1) * limit,
+            limit: limit 
         });
+
+        const totalCount = await dao.count({
+            model: orders, params:{}
+            
+        })
 
         return res.status(200).json({
             success: true,
-            data: allOrders
+            data: allOrders,
+            totalCount
         })
 
 
@@ -407,5 +435,47 @@ adminController.getOrders = async (req, res, next) => {
 
 };
 
+
+adminController.getShipmentSummary = async (req, res, next) => {
+    try {
+
+        /**
+         * get pickups 
+         * 
+         */
+        let serviceProviders = await orders.aggregate([
+            { $group: { _id: { serviceType: '$serviceType' }, total: { $sum: 1 } } },
+            { $project: { serviceType: '$_id.serviceType', total: '$total', _id: 0 } }
+        ])
+
+        let pickupsSummary = await pickups.aggregate([
+            { $group: { _id: { status: '$status' }, total: { $sum: 1 } } },
+            { $project: { status: '$_id.status', total: '$total', _id: 0 } }
+        ])
+
+
+        let dtdcShipmentsSummary = await orders.aggregate([
+            { $group: { _id: { status: '$status' }, total: { $sum: 1 } } },
+            { $project: { status: '$_id.status', total: '$total', _id: 0 } }
+        ])
+
+        return res.status(200).json({
+            success: true,
+            data: {
+                serviceProviders,
+                pickupsSummary,
+                dtdcShipmentsSummary
+            }
+        })
+
+
+
+    }
+    catch (err) {
+        logger.error(err);
+        return next(boom.badImplementation(err));
+    }
+
+};
 
 module.exports = adminController;

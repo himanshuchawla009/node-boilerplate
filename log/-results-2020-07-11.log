@@ -1,0 +1,42 @@
+[32m2020-07-11T15:38:33.099Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:38:33.113Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:38:44.195Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:38:44.199Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:39:22.487Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:39:22.490Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:39:28.334Z - info: [0mGET /api/v1/delivery/getOrders?page=1&limit=10 [33m400[0m 10.973 ms - 45[0m[39m
+[32m[39m
+[32m2020-07-11T15:39:50.946Z - info: [0mPOST /api/v1/client/login [32m200[0m 182.261 ms - 264[0m[39m
+[32m[39m
+[32m2020-07-11T15:40:11.934Z - info: [0mGET /api/v1/delivery/getOrders?page=1&limit=10 [32m200[0m 53.670 ms - 41[0m[39m
+[32m[39m
+[32m2020-07-11T15:40:18.136Z - info: [0mGET /api/v1/delivery/getOrders [32m200[0m 9.178 ms - 41[0m[39m
+[32m[39m
+[32m2020-07-11T15:41:23.464Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:41:23.467Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:42:06.366Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:42:06.370Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:43:58.050Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:43:58.054Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:44:02.001Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:44:02.012Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:45:13.091Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:45:13.095Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:45:36.748Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:45:36.750Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:45:41.639Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:45:41.642Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:45:50.543Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:45:50.546Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:46:05.549Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:46:05.552Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:47:02.821Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:47:02.825Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:47:11.358Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:47:11.363Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:47:28.928Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:47:28.931Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:47:54.048Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:47:54.051Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T15:48:01.196Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T15:48:01.203Z - info: ✅ Connected to Database : logistics[39m

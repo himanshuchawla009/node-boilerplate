@@ -115,5 +115,10 @@ module.exports = function (router) {
 		controller.getOrders
 	);
 
+	router.get('/admin/getShipmentsSummary',
+		authenticateAdmin,
+		controller.getShipmentSummary
+	);
+
 
 }
