@@ -117,7 +117,7 @@ module.exports = function (router) {
 	 *        	description: returns packing slip data
 	 */
 	router.get('/delivery/generatePackingSlip/:waybill',
-		authenticateClient,
+		// authenticateClient,
 		controller.generatePackingSlip
 	);
 

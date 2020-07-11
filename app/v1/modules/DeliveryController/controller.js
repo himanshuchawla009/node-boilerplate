@@ -6,6 +6,7 @@ const boom = require("boom"),
     deliveryService = require('../../services/partner'),
     dao = require('./dao'),
     uuid = require('uuid'),
+    ejs = require("ejs"),
     { orders, pickups } = require('./model');
 model = require('./model');
 
@@ -160,7 +161,9 @@ deliveryController.generateOrder = async (req, res, next) => {
                 shipments: allShipments,
                 serviceType: serviceProvider,
                 orderId,
-                status: "CREATED"
+                status: "CREATED",
+                waybill: currentWayBill
+
 
             }
             let order = await service.createOrder(allShipments, saveOrderObj);
@@ -203,7 +206,9 @@ deliveryController.generateOrder = async (req, res, next) => {
                         shipments: allShipments,
                         serviceType: serviceProvider,
                         orderId,
-                        status: "CREATED"
+                        status: "CREATED",
+                        waybill: currentWayBill
+
                     }
                     await dao.create({ model: orders, obj: saveOrderObj });
                     await dao.insert({
@@ -263,31 +268,103 @@ deliveryController.generatePackingSlip = async (req, res, next) => {
        * 
        */
         let { waybill } = req.params;
-        let service = await deliveryService(DELIVERY_SERVICE_NAME);
 
-        let slips = await service.createPackingSlip(waybill)
-        if (slips.packages.length === 0) {
+        let order = await dao.findOne({ model: orders, params: { waybill },query:"clientId" })
+
+        console.log("order", order)
+        if(order === null) {
             return res.status(400).json({
                 success: false,
-                message: "No packages found for sent waybill number"
+                message: "Invalid way bill"
             });
         }
-        var fs = require('fs');
-        var pdf = require('html-pdf');
-        var html = fs.readFileSync('./packing.html', 'utf8');
-        var options = { format: 'Letter' };
+        let package = orders.shipments[0];
+        let data = {}
 
-        pdf.create(html, options).toFile('./businesscard.pdf', function (err, result) {
-            if (err) {
-                return res.status(500).json({
+        if (order.serviceType === "DTDC") {
+            data = {
+                shippingAddress: package.add,
+                cod: package.cod_amount,
+                product: package.productDescription,
+                orderId: package.orderId,
+                sortCode: "",
+                wbn: package.waybill,
+                orderQrCode: "",
+                rpin: package.pin,
+                oidBarcode: "",
+                price: package.total_amount,
+                total: package.total_amount,
+                name: package.name,
+                destinationAddress: package.add,
+                contact: packahe.phone,
+                destinationCity: package.city
+            }
+        } else if (order.serviceType === "DELHIVERY") {
+            let service = await deliveryService(DELIVERY_SERVICE_NAME);
+
+            let slips = await service.createPackingSlip(waybill)
+            if (slips.packages.length === 0) {
+                return res.status(400).json({
                     success: false,
-                    message: "Unable to generate pdf of packaging slip"
+                    message: "No packages found for sent waybill number"
                 });
             }
-            console.log(result, "pdf file"); // { filename: '/app/businesscard.pdf' }
-            res.download(`./businesscard.pdf`);
+            var fs = require('fs');
+            var pdf = require('html-pdf');
+            var html = fs.readFileSync('./packing.html', 'utf8');
+            let package = slips.packages[0];
+            data = {
+                shippingAddress: package.destination,
+                cod: package.cod,
+                product: package.prd,
+                orderId: package.oid,
+                sortCode: package.sort_code,
+                wbn: package.wbn,
+                orderQrCode: package.barcode,
+                rpin: package.rpin,
+                oidBarcode: package.oid_barcode,
+                price: package.rs,
+                total: package.rs,
+                name: package.name,
+                destinationAddress: package.destination,
+                contact: package.contact,
+                destinationCity: package.destination_city
+            }
+        } else {
+            return res.status(500).json({
+                success: false,
+                message: "Unable to generate pdf of packaging slip, invalid service provider"
+            });
+        }
 
-        });
+        ejs.renderFile("/home/himanshu/logistics/gaint-logistics/templates/packingSlips/delhivery.ejs", {
+            shipment: {
+                ...data
+            }
+        }, (err, data) => {
+            if (err) {
+                console.log("error", err)
+                res.send(err);
+            } else {
+                let options = {
+                    "format": "letter"
+                };
+                pdf.create(data, options).toFile('./businesscard.pdf', function (err, result) {
+                    if (err) {
+                        return res.status(500).json({
+                            success: false,
+                            message: "Unable to generate pdf of packaging slip"
+                        });
+                    }
+                    console.log(result, "pdf file"); // { filename: '/app/businesscard.pdf' }
+                    res.download(`./businesscard.pdf`);
+
+                });
+            }
+        })
+
+
+
 
 
 

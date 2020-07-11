@@ -9,10 +9,15 @@ var orderSchema = new Schema({
     required: true
   },
   "clientId": {
-    type: String,
+    type: Schema.Types.ObjectId, 
+    ref: 'Clients',
     required: true
   },
   "orderId": {
+    type: String,
+    required: true
+  },
+  "waybill": {
     type: String,
     required: true
   },

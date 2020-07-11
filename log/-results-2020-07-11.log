@@ -40,3 +40,126 @@
 [32m2020-07-11T15:47:54.051Z - info: ✅ Connected to Database : logistics[39m
 [32m2020-07-11T15:48:01.196Z - info: ✅ Mongodb Connected[39m
 [32m2020-07-11T15:48:01.203Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T16:44:38.679Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:44:38.682Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T16:45:47.745Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:45:47.748Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T16:46:48.549Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:46:48.551Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-11T16:47:17.482Z - error: ejs is not defined[39m
+[32m2020-07-11T16:47:17.492Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [31m500[0m 579.994 ms - 272[0m[39m
+[32m[39m
+[32m2020-07-11T16:47:48.467Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:47:48.473Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T16:47:50.703Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 508.211 ms - 49[0m[39m
+[32m[39m
+[32m2020-07-11T16:48:30.893Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 539.712 ms - 49[0m[39m
+[32m[39m
+[32m2020-07-11T16:49:08.102Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:49:08.105Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T16:49:11.139Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 539.758 ms - 88[0m[39m
+[32m[39m
+[32m2020-07-11T16:49:31.022Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:49:31.024Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-11T16:49:43.803Z - error: error is not defined[39m
+[32m2020-07-11T16:49:43.818Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [31m500[0m 547.799 ms - 613[0m[39m
+[32m[39m
+[32m2020-07-11T16:49:51.697Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:49:51.700Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T16:49:53.835Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 494.730 ms - 88[0m[39m
+[32m[39m
+[32m2020-07-11T16:50:11.128Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:50:11.131Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T16:50:15.799Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1490.502 ms - 28961[0m[39m
+[32m[39m
+[32m2020-07-11T16:50:53.537Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:50:53.540Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T16:50:59.283Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1052.514 ms - 28961[0m[39m
+[32m[39m
+[32m2020-07-11T16:51:55.597Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T16:51:55.609Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T16:54:42.243Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 963.183 ms - 18984[0m[39m
+[32m[39m
+[32m2020-07-11T16:55:23.686Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 2043.943 ms - 18979[0m[39m
+[32m[39m
+[32m2020-07-11T17:11:10.288Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1265.681 ms - 18979[0m[39m
+[32m[39m
+[32m2020-07-11T17:18:37.925Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 930.053 ms - 18310[0m[39m
+[32m[39m
+[32m2020-07-11T17:20:57.978Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 872.128 ms - 19154[0m[39m
+[32m[39m
+[32m2020-07-11T17:22:26.510Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1020.932 ms - 18342[0m[39m
+[32m[39m
+[32m2020-07-11T17:22:46.069Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 897.545 ms - 19171[0m[39m
+[32m[39m
+[32m2020-07-11T17:23:05.595Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 852.969 ms - 18339[0m[39m
+[32m[39m
+[32m2020-07-11T17:23:49.116Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1159.736 ms - 18338[0m[39m
+[32m[39m
+[32m2020-07-11T17:38:07.196Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T17:38:07.199Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T17:38:41.473Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T17:38:41.475Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T17:40:31.868Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T17:40:31.871Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T17:41:19.828Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 997.164 ms - 28787[0m[39m
+[32m[39m
+[32m2020-07-11T17:44:34.309Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1038.605 ms - 42032[0m[39m
+[32m[39m
+[32m2020-07-11T17:47:06.195Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 1024.412 ms - 42155[0m[39m
+[32m[39m
+[32m2020-07-11T17:47:50.567Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 914.019 ms - 41310[0m[39m
+[32m[39m
+[32m2020-07-11T17:48:15.007Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 956.441 ms - 41309[0m[39m
+[32m[39m
+[32m2020-07-11T17:50:33.913Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 977.294 ms - 48814[0m[39m
+[32m[39m
+[32m2020-07-11T17:51:34.690Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 927.407 ms - 48873[0m[39m
+[32m[39m
+[32m2020-07-11T17:52:05.906Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 943.997 ms - 47868[0m[39m
+[32m[39m
+[32m2020-07-11T17:52:34.011Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [32m200[0m 809.389 ms - 47851[0m[39m
+[32m[39m
+[32m2020-07-11T17:53:17.297Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T17:53:17.301Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T17:55:22.904Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T17:55:22.907Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T17:57:00.977Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T17:57:00.980Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T18:16:02.283Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:16:02.285Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T18:18:12.038Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:18:12.042Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T18:20:00.746Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:20:00.748Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T18:20:04.540Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:20:04.544Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T18:20:28.805Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:20:28.815Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-11T18:21:26.173Z - error: dao.find(...).populate is not a function[39m
+[32m2020-07-11T18:21:26.187Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [31m500[0m 22.250 ms - 3361[0m[39m
+[32m[39m
+[32m2020-07-11T18:22:15.997Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:22:16.003Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-11T18:22:17.561Z - error: Cannot read property '0' of undefined[39m
+[32m2020-07-11T18:22:17.574Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [31m500[0m 29.742 ms - 392[0m[39m
+[32m[39m
+[32m2020-07-11T18:22:47.607Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:22:47.610Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-11T18:22:53.645Z - error: Cannot read property '0' of undefined[39m
+[32m2020-07-11T18:22:53.653Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [31m500[0m 14.215 ms - 392[0m[39m
+[32m[39m
+[31m2020-07-11T18:23:01.674Z - error: Cannot read property '0' of undefined[39m
+[32m2020-07-11T18:23:01.679Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [31m500[0m 9.643 ms - 392[0m[39m
+[32m[39m
+[32m2020-07-11T18:23:36.707Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:23:36.716Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-11T18:23:38.139Z - error: Cannot read property '0' of undefined[39m
+[32m2020-07-11T18:23:38.151Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [31m500[0m 22.761 ms - 392[0m[39m
+[32m[39m
+[32m2020-07-11T18:24:16.122Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:24:16.126Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T18:24:25.807Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-11T18:24:25.809Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-11T18:24:26.563Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [33m400[0m 12.880 ms - 46[0m[39m
+[32m[39m
