@@ -58,7 +58,6 @@ adminController.createClient = async (req, res, next) => {
 
         let name = clientName
         let countryCode =  "91"
-        let phone = phone
         let message = `Your shipo account credentials are: 
          Emal: ${clientEmail}, Password: ${password} , Api Key: ${key}`;
         await notification.send_sms(countryCode,phone,name, message)
