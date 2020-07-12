@@ -6,7 +6,9 @@ const boom = require("boom"),
     bcrypt = require('bcryptjs'),
     dao = require('./../AdminController/dao'),
     { clients } = require('./../AdminController/model'),
-    logger = require("../../../../config/logger");
+    deliveryModel = require('./../DeliveryController/model'),
+    logger = require("../../../../config/logger"),
+    deliveryService = require('../../services/partner');
 const presets = require("../../../../utils/presets");
 const jwt = require('jsonwebtoken');
 const xlsxFile = require('read-excel-file/node');
@@ -125,19 +127,189 @@ clientController.login = async (req, res, next) => {
 clientController.uploadShipmentsExcel = async (req, res, next) => {
     try {
         console.log("file", req.file)
-
+        let successOrders = []
+        let failedOrders = []
         if (!!req.file) {
             let rows = await xlsxFile(req.file.path);
             console.log(rows);
-            for (let r = 1; r < rows.length; r++) {
+            let delhiveryShipments = [];
 
-                let order = row[r];
+            //dtdc shipments
+            for (let r = 1; r < rows.length; r++) {
+                let orderId = uuid.v4().toString();
+                let allShipments = [];
+                console.log("current row", rows[r])
+                let currentShipment = rows[r]
+                let serviceProvider = currentShipment[15]
+                console.log("service provider", serviceProvider)
+                if (serviceProvider === 'DELHIVERY') {
+                    delhiveryShipments.push(r);
+                } else {
+                    let service = await deliveryService(serviceProvider);
+
+                    let currentWayBill = await service.createWayBill()
+
+                    if(currentWayBill.status === false) {
+                        failedOrders.push(currentShipment[0])
+                        continue;
+                    } 
+
+                    let ship = {
+                        "name": currentShipment[1],
+                        "waybill": currentWayBill.waybill,
+                        "weight": currentShipment[13],
+                        "order": orderId,
+                        "phone": currentShipment[9],
+                        "products_desc": currentShipment[10],
+                        "cod_amount": currentShipment[11],
+                        "country": currentShipment[7],
+                        "order_date": currentShipment[2],
+                        "total_amount": currentShipment[12],
+                        "add": currentShipment[7],
+                        "pin": currentShipment[5],
+                        "quantity": currentShipment[14],
+                        "payment_mode": currentShipment[8],
+                        "state": currentShipment[3],
+                        "city": currentShipment[4],
+                        "status": "MANIFESTED"
+                    };
+                    allShipments.push(ship)
+
+                    console.log("all shipments", allShipments)
+                    let saveOrderObj = {
+                        pickUpLocation: "GAINT LOGISTIC",
+                        clientId: req.user._id,
+                        shipments: allShipments,
+                        serviceType: serviceProvider,
+                        orderId,
+                        status: "CREATED",
+                        waybill: currentWayBill.toString()
+
+
+                    }
+                    let order = await service.createOrder(allShipments, saveOrderObj);
+
+                    successOrders.push(currentShipment[0])
+                }
+            }
+
+            for (let i = 0; i < delhiveryShipments.length; i++) {
+
+                let r = delhiveryShipments[i];
+
+                let orderId = uuid.v4().toString();
+                let allShipments = [];
+                console.log("current row", rows[r])
+                let currentShipment = rows[r]
+                let serviceProvider = currentShipment[15]
+
+                let service = await deliveryService(serviceProvider);
+
+                let currentWayBill = await service.createWayBill()
+
+                let ship = {
+                    "name": currentShipment[1],
+                    "waybill": currentWayBill,
+                    "weight": currentShipment[13],
+                    "order": orderId,
+                    "phone": currentShipment[9],
+                    "products_desc": currentShipment[10],
+                    "cod_amount": currentShipment[11],
+                    "country": currentShipment[7],
+                    "order_date": currentShipment[2],
+                    "total_amount": currentShipment[12],
+                    "add": currentShipment[7],
+                    "pin": currentShipment[5],
+                    "quantity": currentShipment[14],
+                    "payment_mode": currentShipment[8],
+                    "state": currentShipment[3],
+                    "city": currentShipment[4],
+                    "status": "MANIFESTED"
+                };
+                console.log(ship,"shipment")
+                allShipments.push(ship)
+                let order = await service.createOrder(allShipments);
+
+                order = JSON.parse(order);
+                if (order.success == false) {
+
+                    if (order.packages.length > 0) {
+                        failedOrders.push(currentShipment[0])
+                    } else {
+                        failedOrders.push(currentShipment[0])
+                    }
+
+                }
+                else if (!!order.rmk) {
+                    failedOrders.push(currentShipment[0])
+                } else {
+                    try {
+                        let saveOrderObj = {
+                            pickUpLocation: "GAINT LOGISTIC",
+                            clientId: req.user._id,
+                            shipments: allShipments,
+                            serviceType: serviceProvider,
+                            orderId,
+                            status: "CREATED",
+                            waybill: currentWayBill
+
+                        }
+                        await dao.create({ model: orders, obj: saveOrderObj });
+                        await dao.insert({
+                            model: deliveryModel.shipments,
+                            docArray: allShipments
+
+
+                        });
+
+
+                        successOrders.push(currentShipment[0])
+
+                    } catch (error) {
+                        console.log("error", error)
+                        let orderstatus = await service.cancelOrder(currentWayBill)
+
+                        //if some error occurs after creating order  then cancel the order
+                        if (!!orderstatus.status) {
+                            failedOrders.push(currentShipment[0])
+                            return res.status(500).json({
+                                success: true,
+                                message: "Some order are not able to get placed, Please contact our team",
+                                failedOrders,
+                                successOrders
+                            });
+                        } else {
+                            failedOrders.push(currentShipment[0])
+                            return res.status(500).json({
+                                success: true,
+                                message: "Some order are not able to get placed, Please contact our team",
+                                failedOrders,
+                                successOrders
+                            });
+
+                        }
+                    }
+
+                }
 
             }
-            return res.status(200).json({
-                success: true,
-                message: "Shipments file uploaded successfully"
-            });
+
+            if (failedOrders.length > 0) {
+
+                return res.status(500).json({
+                    success: false,
+                    message: "Some order are not able to get placed, Please contact our team",
+                    failedOrders,
+                    successOrders
+                });
+            } else {
+
+                return res.status(200).json({
+                    success: true,
+                    message: "Shipments created successfully"
+                });
+            }
+
         } else {
             return res.status(400).json({
                 success: false,

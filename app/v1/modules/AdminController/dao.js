@@ -204,6 +204,26 @@ return new Promise((resolve, reject) => {
 });
 };
 
+const insert = function ({
+  model=model,
+  docArray,
+  cb = () => { } // eslint-disable-line
+  }) {
+  return new Promise((resolve, reject) => {
+
+    model.insertMany(docArray,(err, data)=>{
+      if (!err) {
+        resolve(data);
+
+        cb(false, data);
+      } else {
+        reject(err)
+        cb(err, false);
+      }
+    })
+  });
+  
+  };
 
 const obj = {
 find,
@@ -216,7 +236,8 @@ remove,
 findOneAndUpdate,
 findByIdAndUpdate,
 aggregatePipeline,
-deleteSoft
+deleteSoft,
+insert
 };
 
 module.exports = obj;

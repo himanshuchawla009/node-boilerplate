@@ -120,11 +120,22 @@ deliveryController.generateOrder = async (req, res, next) => {
         let service = await deliveryService(serviceProvider);
 
         let currentWayBill = await service.createWayBill()
+        if (serviceProvider === 'DTDC') {
+            if (currentWayBill.status === false) {
+                return res.status(500).json({
+                    success: false,
+                    message: "DTDC service is temporarily not available, Please contact our team",
+                    
+                });
+            } else {
+                currentWayBill = currentWayBill.waybill
+            }
+        }
 
         for (let i = 0; i < shipments.length; i++) {
             let currentShipment = shipments[i];
             let ship = {
-                "waybill": currentWayBill,
+                "waybill": currentWayBill.toString(),
                 "weight": currentShipment.weight,
                 "order": orderId,
                 "phone": currentShipment.phone,
@@ -143,6 +154,7 @@ deliveryController.generateOrder = async (req, res, next) => {
                 "status": "MANIFESTED"
             };
 
+            console.log("shipment", ship)
 
             allShipments.push(ship)
 
@@ -162,7 +174,7 @@ deliveryController.generateOrder = async (req, res, next) => {
                 serviceType: serviceProvider,
                 orderId,
                 status: "CREATED",
-                waybill: currentWayBill
+                waybill: currentWayBill.toString()
 
 
             }
@@ -269,16 +281,16 @@ deliveryController.generatePackingSlip = async (req, res, next) => {
        */
         let { waybill } = req.params;
 
-        let order = await dao.findOne({ model: orders, params: { waybill },query:"clientId" })
+        let order = await dao.findOne({ model: orders, params: { waybill }, query: "clientId" })
 
         console.log("order", order)
-        if(order === null) {
+        if (order === null) {
             return res.status(400).json({
                 success: false,
                 message: "Invalid way bill"
             });
         }
-        let package = orders.shipments[0];
+        let package = order.shipments[0];
         let data = {}
 
         if (order.serviceType === "DTDC") {

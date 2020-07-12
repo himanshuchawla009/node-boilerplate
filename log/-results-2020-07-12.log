@@ -1,0 +1,201 @@
+[32m2020-07-12T06:36:07.671Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T06:36:07.675Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T06:38:44.250Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T06:38:44.252Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T06:44:27.474Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [32m200[0m 84.944 ms - 65[0m[39m
+[32m[39m
+[32m2020-07-12T06:44:49.669Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T06:44:49.672Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T06:44:52.320Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [32m200[0m 91.707 ms - 65[0m[39m
+[32m[39m
+[31m2020-07-12T06:49:37.948Z - error: Cannot read property 'nodeType' of undefined[39m
+[32m2020-07-12T06:49:37.958Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 63.765 ms - 1641[0m[39m
+[32m[39m
+[32m2020-07-12T06:49:56.527Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T06:49:56.530Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T06:50:41.224Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [32m200[0m 169.080 ms - 65[0m[39m
+[32m[39m
+[32m2020-07-12T06:51:07.570Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T06:51:07.572Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T06:51:10.436Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [32m200[0m 148.005 ms - 65[0m[39m
+[32m[39m
+[32m2020-07-12T06:51:22.114Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T06:51:22.117Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T06:51:26.815Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [32m200[0m 258.280 ms - 65[0m[39m
+[32m[39m
+[32m2020-07-12T06:55:43.059Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T06:55:43.075Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-12T06:55:51.785Z - error: serviceProvider is not defined[39m
+[32m2020-07-12T06:55:51.805Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 176.393 ms - 373[0m[39m
+[32m[39m
+[32m2020-07-12T06:56:31.357Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T06:56:31.360Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T06:56:48.686Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T06:56:48.695Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-12T06:56:58.045Z - error: INVALID DELIVERY SERVICE[39m
+[32m2020-07-12T06:56:58.084Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 260.698 ms - 450[0m[39m
+[32m[39m
+[31m2020-07-12T06:57:31.583Z - error: INVALID DELIVERY SERVICE[39m
+[32m2020-07-12T06:57:31.592Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 68.955 ms - 450[0m[39m
+[32m[39m
+[32m2020-07-12T06:57:43.849Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [32m200[0m 491.701 ms - 65[0m[39m
+[32m[39m
+[32m2020-07-12T06:58:14.674Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [32m200[0m 93.128 ms - 65[0m[39m
+[32m[39m
+[31m2020-07-12T06:59:15.173Z - error: DTDC service temporarily not available[39m
+[32m2020-07-12T06:59:15.175Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 82.688 ms - 388[0m[39m
+[32m[39m
+[32m2020-07-12T07:01:48.049Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:01:48.052Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:06:47.205Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:06:47.207Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:07:08.443Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:07:08.446Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:08:25.819Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:08:25.824Z - info: ✅ Connected to Database : logistics[39m
+[31m2020-07-12T07:08:56.570Z - error: DTDC service temporarily not available[39m
+[32m2020-07-12T07:08:56.582Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 157.395 ms - 388[0m[39m
+[32m[39m
+[32m2020-07-12T07:17:17.121Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:17:17.124Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:18:44.636Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:18:44.639Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:19:05.789Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:19:05.791Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:19:18.222Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:19:18.225Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:19:19.991Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 175.423 ms - 110[0m[39m
+[32m[39m
+[32m2020-07-12T07:19:44.042Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 73.176 ms - 110[0m[39m
+[32m[39m
+[32m2020-07-12T07:20:15.130Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:20:15.133Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:20:17.598Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 899.657 ms - 115[0m[39m
+[32m[39m
+[32m2020-07-12T07:20:44.993Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:20:44.998Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:20:52.810Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 821.230 ms - 135[0m[39m
+[32m[39m
+[32m2020-07-12T07:22:01.172Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:22:01.175Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:22:03.698Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 981.644 ms - 132[0m[39m
+[32m[39m
+[32m2020-07-12T07:23:40.743Z - info: [0mPOST /api/v1/delivery/createOrder [33m400[0m 3.571 ms - 45[0m[39m
+[32m[39m
+[32m2020-07-12T07:24:05.428Z - info: [0mPOST /api/v1/delivery/createOrder [33m401[0m 2.887 ms - 51[0m[39m
+[32m[39m
+[32m2020-07-12T07:24:11.984Z - info: [0mPOST /api/v1/client/login [32m200[0m 261.942 ms - 264[0m[39m
+[32m[39m
+[32m2020-07-12T07:24:27.432Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1000.058 ms - 445[0m[39m
+[32m[39m
+[32m2020-07-12T07:25:04.437Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 946.312 ms - 445[0m[39m
+[32m[39m
+[32m2020-07-12T07:25:09.333Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 835.555 ms - 132[0m[39m
+[32m[39m
+[32m2020-07-12T07:25:58.501Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:25:58.505Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:26:05.162Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 1014.460 ms - 132[0m[39m
+[32m[39m
+[32m2020-07-12T07:27:04.564Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:27:04.569Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:27:17.499Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 10043.202 ms - 132[0m[39m
+[32m[39m
+[32m2020-07-12T07:27:41.411Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:27:41.416Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:27:44.513Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 906.261 ms - 132[0m[39m
+[32m[39m
+[32m2020-07-12T07:28:20.441Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:28:20.443Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:28:25.697Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 1168.252 ms - 132[0m[39m
+[32m[39m
+[32m2020-07-12T07:28:33.691Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 808.863 ms - 446[0m[39m
+[32m[39m
+[32m2020-07-12T07:30:58.295Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 790.449 ms - 132[0m[39m
+[32m[39m
+[32m2020-07-12T07:31:25.806Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 694.741 ms - 132[0m[39m
+[32m[39m
+[32m2020-07-12T07:32:35.852Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:32:35.854Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:32:46.771Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:32:46.773Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:32:51.909Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 1010.071 ms - 132[0m[39m
+[32m[39m
+[32m2020-07-12T07:34:00.652Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:34:00.662Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:34:02.916Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:34:02.919Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:34:25.885Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:34:25.890Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:34:35.155Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 1691.874 ms - 112[0m[39m
+[32m[39m
+[32m2020-07-12T07:35:19.128Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:35:19.134Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:36:00.280Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:36:00.283Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:36:27.821Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:36:27.825Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:36:31.177Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [33m401[0m 17.957 ms - 51[0m[39m
+[32m[39m
+[32m2020-07-12T07:36:45.098Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 1764.844 ms - 131[0m[39m
+[32m[39m
+[32m2020-07-12T07:38:11.546Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:38:11.549Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:38:28.241Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:38:28.245Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:38:32.669Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 1691.768 ms - 131[0m[39m
+[32m[39m
+[32m2020-07-12T07:39:16.173Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:39:16.178Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:39:21.730Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 1020.781 ms - 131[0m[39m
+[32m[39m
+[32m2020-07-12T07:40:10.302Z - info: [0mPOST /api/v1/admin/login [32m200[0m 173.976 ms - 278[0m[39m
+[32m[39m
+[32m2020-07-12T07:40:25.492Z - info: [0mPOST /api/v1/admin/addWayBill [32m200[0m 6.756 ms - 56[0m[39m
+[32m[39m
+[31m2020-07-12T07:40:31.939Z - error: Orders validation failed: waybill: Cast to String failed for value "{ status: true, waybill: '100000' }" at path "waybill"[39m
+[32m2020-07-12T07:40:31.948Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 144.787 ms - 2042[0m[39m
+[32m[39m
+[32m2020-07-12T07:41:14.915Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:41:14.918Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:41:17.902Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 1158.757 ms - 131[0m[39m
+[32m[39m
+[32m2020-07-12T07:41:47.850Z - info: [0mPOST /api/v1/admin/addWayBill [32m200[0m 9.892 ms - 56[0m[39m
+[32m[39m
+[31m2020-07-12T07:41:51.762Z - error: Orders validation failed: waybill: Cast to String failed for value "{ status: true, waybill: '100000' }" at path "waybill"[39m
+[32m2020-07-12T07:41:51.768Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 127.178 ms - 2042[0m[39m
+[32m[39m
+[32m2020-07-12T07:43:56.514Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:43:56.518Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:44:01.238Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 190.890 ms - 130[0m[39m
+[32m[39m
+[32m2020-07-12T07:44:28.975Z - info: [0mPOST /api/v1/admin/addWayBill [32m200[0m 30.928 ms - 56[0m[39m
+[32m[39m
+[31m2020-07-12T07:44:33.043Z - error: model.insertMany is not a function[39m
+[32m2020-07-12T07:44:33.054Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 200.293 ms - 589[0m[39m
+[32m[39m
+[32m2020-07-12T07:52:15.389Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:52:15.392Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:52:21.925Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 340.831 ms - 130[0m[39m
+[32m[39m
+[32m2020-07-12T07:52:31.691Z - info: [0mPOST /api/v1/admin/addWayBill [32m200[0m 28.033 ms - 56[0m[39m
+[32m[39m
+[32m2020-07-12T07:52:34.541Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [32m200[0m 148.686 ms - 65[0m[39m
+[32m[39m
+[32m2020-07-12T07:52:52.501Z - info: [0mPOST /api/v1/admin/addWayBill [32m200[0m 5.631 ms - 56[0m[39m
+[32m[39m
+[32m2020-07-12T07:53:07.485Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [32m200[0m 1270.955 ms - 65[0m[39m
+[32m[39m
+[32m2020-07-12T07:53:41.041Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:53:41.044Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:55:06.349Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:55:06.352Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T07:55:47.172Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T07:55:47.174Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T08:20:54.164Z - info: [0mGET / [33m404[0m 7.437 ms - 48[0m[39m
+[32m[39m
+[32m2020-07-12T08:21:24.989Z - info: [0mPOST /api/v1/client/uploadShipmentsExcel [31m500[0m 1218.536 ms - 131[0m[39m
+[32m[39m
+[32m2020-07-12T08:22:12.936Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T08:22:12.940Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T08:22:26.458Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T08:22:26.460Z - info: ✅ Connected to Database : logistics[39m

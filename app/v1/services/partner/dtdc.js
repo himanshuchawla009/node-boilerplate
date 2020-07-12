@@ -43,12 +43,17 @@ class DTDC {
                 });
                 console.log("way bill data", waybillData)
                 if(!!waybillData) {
-                    let waybill = waybillData.waybill;
+                    let waybill = waybillData.wayBill;
 
-                    resolve(waybill);
+                    resolve({
+                        status:true,
+                        waybill
+                    });
 
                 } else {
-                    reject("DTDC service temporarily not available")
+                    resolve({
+                        status:false
+                    })
                 }
 
             } catch (error) {
@@ -58,14 +63,14 @@ class DTDC {
         })
     }
 
-    async createOrder(shipments, order) {
+    async createOrder(allShipments, order) {
 
 
         return new Promise(async (resolve, reject) => {
             try {
 
                 await dao.create({ model: orders, obj: order })
-                await dao.insert({ model: shipments, docArray: shipments })
+                await dao.insert({ model: shipments, docArray: allShipments })
 
                 resolve(true);
             } catch (error) {
