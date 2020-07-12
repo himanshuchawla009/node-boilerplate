@@ -1,4 +1,5 @@
 const rp = require('request-promise'),
+    rateCalculatorService = require('../../services/rateCalculatorService'),
     { pickups, wayBills, pincodes, orders, shipments } = require('../../modules/DeliveryController/model'),
     dao = require('../../modules/DeliveryController/dao')
 class DTDC {
@@ -11,13 +12,8 @@ class DTDC {
     async checkPinCodeAvailable(pincode) {
         return new Promise(async (resolve, reject) => {
             try {
-                let data = await dao.findOne({
-                    model: pincodes, params: {
-                        pin: pincode,
-                        service: this.service
-                    }
-                });
-                resolve(data);
+                await rateCalculatorService.estimateDeliveryCharge(pincode, 10);
+                resolve(true);
             } catch (error) {
                 reject(error);
 
@@ -42,17 +38,17 @@ class DTDC {
 
                 });
                 console.log("way bill data", waybillData)
-                if(!!waybillData) {
+                if (!!waybillData) {
                     let waybill = waybillData.wayBill;
 
                     resolve({
-                        status:true,
+                        status: true,
                         waybill
                     });
 
                 } else {
                     resolve({
-                        status:false
+                        status: false
                     })
                 }
 
