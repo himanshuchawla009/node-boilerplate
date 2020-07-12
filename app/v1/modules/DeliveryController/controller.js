@@ -349,7 +349,7 @@ deliveryController.generatePackingSlip = async (req, res, next) => {
             });
         }
 
-        ejs.renderFile("/home/himanshu/logistics/gaint-logistics/templates/packingSlips/delhivery.ejs", {
+        ejs.renderFile("templates/packingSlips/delhivery.ejs", {
             shipment: {
                 ...data
             }

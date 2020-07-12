@@ -199,3 +199,21 @@
 [32m2020-07-12T08:22:12.940Z - info: ✅ Connected to Database : logistics[39m
 [32m2020-07-12T08:22:26.458Z - info: ✅ Mongodb Connected[39m
 [32m2020-07-12T08:22:26.460Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T08:26:48.661Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T08:26:48.663Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T08:27:16.210Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [33m400[0m 14.917 ms - 46[0m[39m
+[32m[39m
+[32m2020-07-12T08:27:47.470Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010030715 [32m200[0m 1307.641 ms - 47602[0m[39m
+[32m[39m
+[32m2020-07-12T08:28:00.521Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [33m400[0m 3.532 ms - 46[0m[39m
+[32m[39m
+[32m2020-07-12T08:28:03.764Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [33m400[0m 23.204 ms - 46[0m[39m
+[32m[39m
+[32m2020-07-12T08:28:09.695Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010030715 [32m200[0m 876.235 ms - 47602[0m[39m
+[32m[39m
+[32m2020-07-12T08:28:27.636Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T08:28:27.647Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T08:28:29.794Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010024780 [33m400[0m 8.029 ms - 46[0m[39m
+[32m[39m
+[32m2020-07-12T08:28:33.929Z - info: [0mGET /api/v1/delivery/generatePackingSlip/4631010030715 [32m200[0m 1065.620 ms - 47602[0m[39m
+[32m[39m
