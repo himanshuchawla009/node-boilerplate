@@ -309,7 +309,7 @@ deliveryController.generatePackingSlip = async (req, res, next) => {
                 total: package.total_amount,
                 name: package.name,
                 destinationAddress: package.add,
-                contact: packahe.phone,
+                contact: package.phone,
                 destinationCity: package.city
             }
         } else if (order.serviceType === "DELHIVERY") {

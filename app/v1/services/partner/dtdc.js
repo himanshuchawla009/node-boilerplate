@@ -130,8 +130,8 @@ class DTDC {
 
         return new Promise(async (resolve, reject) => {
             try {
-                await dao.update({
-                    model: shipments, query: {
+                await dao.findOneAndUpdate({
+                    model: orders, query: {
                         service: this.service,
                         waybill
                     }, params: {
