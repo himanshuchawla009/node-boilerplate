@@ -140,6 +140,7 @@ class DTDC {
                         multi: true
                     }
                 })
+                resolve(true)
             } catch (error) {
                 reject(error);
 

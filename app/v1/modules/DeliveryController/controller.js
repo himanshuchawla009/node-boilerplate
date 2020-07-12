@@ -9,6 +9,9 @@ const boom = require("boom"),
     ejs = require("ejs"),
     { orders, pickups } = require('./model');
 model = require('./model');
+var fs = require('fs');
+var pdf = require('html-pdf');
+
 
 
 let DELIVERY_SERVICE_NAME = "DELHIVERY";
@@ -322,9 +325,7 @@ deliveryController.generatePackingSlip = async (req, res, next) => {
                     message: "No packages found for sent waybill number"
                 });
             }
-            var fs = require('fs');
-            var pdf = require('html-pdf');
-            var html = fs.readFileSync('./packing.html', 'utf8');
+          
             let package = slips.packages[0];
             data = {
                 shippingAddress: package.destination,
@@ -350,6 +351,7 @@ deliveryController.generatePackingSlip = async (req, res, next) => {
             });
         }
 
+     
         ejs.renderFile("templates/packingSlips/delhivery.ejs", {
             shipment: {
                 ...data
