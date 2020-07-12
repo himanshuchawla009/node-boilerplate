@@ -9,6 +9,9 @@ dao = require('./dao'),
     { pickups, wayBills, pincodes, orders, shipments } = require('../DeliveryController/model'),
     logger = require("../../../../config/logger");
 
+    const notification = require('../../services/notification')
+
+
 
 
 adminController = Object.create(null);
@@ -53,7 +56,12 @@ adminController.createClient = async (req, res, next) => {
 
         await dao.create({ model: clients, obj: client });
 
-
+        let name = clientName
+        let countryCode =  "91"
+        let phone = phone
+        let message = `Your shipo account credentials are: 
+         Emal: ${clientEmail}, Password: ${password} , Api Key: ${key}`;
+        await notification.send_sms(countryCode,phone,name, message)
         return res.status(200).json({
             success: true,
             message: "Client created successfully",
