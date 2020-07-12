@@ -351,32 +351,61 @@ deliveryController.generatePackingSlip = async (req, res, next) => {
             });
         }
 
+        if(order.serviceType  === 'DELHIVERY') {
+            ejs.renderFile("templates/packingSlips/delhivery.ejs", {
+                shipment: {
+                    ...data
+                }
+            }, (err, data) => {
+                if (err) {
+                    console.log("error", err)
+                    res.send(err);
+                } else {
+                    let options = {
+                        "format": "letter"
+                    };
+                    pdf.create(data, options).toFile('./businesscard.pdf', function (err, result) {
+                        if (err) {
+                            return res.status(500).json({
+                                success: false,
+                                message: "Unable to generate pdf of packaging slip"
+                            });
+                        }
+                        console.log(result, "pdf file"); // { filename: '/app/businesscard.pdf' }
+                        res.download(`./businesscard.pdf`);
+    
+                    });
+                }
+            })
+        } else{
+            ejs.renderFile("templates/packingSlips/dtdc.ejs", {
+                shipment: {
+                    ...data
+                }
+            }, (err, data) => {
+                if (err) {
+                    console.log("error", err)
+                    res.send(err);
+                } else {
+                    let options = {
+                        "format": "letter"
+                    };
+                    pdf.create(data, options).toFile('./businesscard.pdf', function (err, result) {
+                        if (err) {
+                            return res.status(500).json({
+                                success: false,
+                                message: "Unable to generate pdf of packaging slip"
+                            });
+                        }
+                        console.log(result, "pdf file"); // { filename: '/app/businesscard.pdf' }
+                        res.download(`./businesscard.pdf`);
+    
+                    });
+                }
+            })
+        }
      
-        ejs.renderFile("templates/packingSlips/delhivery.ejs", {
-            shipment: {
-                ...data
-            }
-        }, (err, data) => {
-            if (err) {
-                console.log("error", err)
-                res.send(err);
-            } else {
-                let options = {
-                    "format": "letter"
-                };
-                pdf.create(data, options).toFile('./businesscard.pdf', function (err, result) {
-                    if (err) {
-                        return res.status(500).json({
-                            success: false,
-                            message: "Unable to generate pdf of packaging slip"
-                        });
-                    }
-                    console.log(result, "pdf file"); // { filename: '/app/businesscard.pdf' }
-                    res.download(`./businesscard.pdf`);
-
-                });
-            }
-        })
+       
 
 
 
