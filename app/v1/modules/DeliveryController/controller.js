@@ -8,7 +8,8 @@ const boom = require("boom"),
     uuid = require('uuid'),
     ejs = require("ejs"),
     { orders, pickups } = require('./model');
-model = require('./model');
+model = require('./model')
+const notification = require('../../services/notification')
 var fs = require('fs');
 var pdf = require('html-pdf');
 
@@ -183,6 +184,17 @@ deliveryController.generateOrder = async (req, res, next) => {
 
             }
             let order = await service.createOrder(allShipments, saveOrderObj);
+
+
+
+            let name = allShipments[0].name
+            let countryCode =  "91"
+            let phone = allShipments[0].phone
+            let message = `Your shipment tracking awb number is ${currentWayBill}. 
+            You can track your shipment here: https://www.dtdc.in/tracking/shipment-tracking.asp`;
+            await notification.send_sms(countryCode,phone,name, message)
+
+
             return res.status(200).json({
                 success: true,
                 message: "Successfully created order",
@@ -235,6 +247,12 @@ deliveryController.generateOrder = async (req, res, next) => {
                     });
 
 
+                    let name = allShipments[0].name
+                    let countryCode =  "91"
+                    let phone = allShipments[0].phone
+                    let message = `Your shipment tracking awb number is ${currentWayBill}. 
+                    You can track your shipment here: https://www.delhivery.com/`;
+                    await notification.send_sms(countryCode,phone,name, message)
 
                     return res.status(200).json({
                         success: true,

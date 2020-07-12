@@ -249,3 +249,17 @@
 [32m2020-07-12T13:44:53.178Z - info: ✅ Connected to Database : logistics[39m
 [32m2020-07-12T13:45:07.661Z - info: ✅ Mongodb Connected[39m
 [32m2020-07-12T13:45:07.663Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T14:01:17.065Z - info: [0mGET / [33m404[0m 35.298 ms - 48[0m[39m
+[32m[39m
+[32m2020-07-12T14:23:24.721Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T14:23:24.726Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T14:25:13.788Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T14:25:13.791Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T14:29:03.898Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T14:29:03.902Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T14:31:06.623Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T14:31:06.625Z - info: ✅ Connected to Database : logistics[39m
+[32m2020-07-12T14:31:44.380Z - info: [0mPOST /api/v1/delivery/createOrder [32m200[0m 1400.024 ms - 446[0m[39m
+[32m[39m
+[32m2020-07-12T14:38:55.603Z - info: ✅ Mongodb Connected[39m
+[32m2020-07-12T14:38:55.610Z - info: ✅ Connected to Database : logistics[39m
