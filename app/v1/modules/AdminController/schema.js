@@ -37,6 +37,15 @@ module.exports = {
 
         })
     },
+    addWayBillSeries: {
+        body: Joi.object().keys({
+            service: Joi.string().valid("DTDC").required(),
+            fromNumber: Joi.string().required(),
+            toNumber: Joi.string().required()
+
+
+        })
+    },
     addPincode: {
         body: Joi.object().keys({
             covid_zone: Joi.string().valid('Y','N').required(), 

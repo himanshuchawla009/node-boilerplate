@@ -9,7 +9,7 @@ dao = require('./dao'),
     { pickups, wayBills, pincodes, orders, shipments } = require('../DeliveryController/model'),
     logger = require("../../../../config/logger");
 
-    const notification = require('../../services/notification')
+const notification = require('../../services/notification')
 
 
 
@@ -57,10 +57,10 @@ adminController.createClient = async (req, res, next) => {
         await dao.create({ model: clients, obj: client });
 
         let name = clientName
-        let countryCode =  "91"
+        let countryCode = "91"
         let message = `Your shipo account credentials are: 
          Emal: ${clientEmail}, Password: ${password} , Api Key: ${key}`;
-        await notification.send_sms(countryCode,phone,name, message)
+        await notification.send_sms(countryCode, phone, name, message)
         return res.status(200).json({
             success: true,
             message: "Client created successfully",
@@ -100,6 +100,66 @@ adminController.fetchClientApiKey = async (req, res, next) => {
             return res.status(400).json({
                 success: false,
                 message: "Invalid client name"
+            });
+        }
+
+
+    }
+    catch (err) {
+        logger.error(err);
+        return next(boom.badImplementation(err));
+    }
+
+};
+
+adminController.deleteClient = async (req, res, next) => {
+    try {
+
+
+        let { id } = req.params;
+
+        let clientDetails = await dao.deleteSoft({ model: clients, params: { _id: id }, deletedBy: 'admin' });
+
+        if (!!clientDetails) {
+            return res.status(200).json({
+                success: true,
+                apiKey: "User deleted successfully"
+            });
+
+        } else {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid client id"
+            });
+        }
+
+
+    }
+    catch (err) {
+        logger.error(err);
+        return next(boom.badImplementation(err));
+    }
+
+};
+
+adminController.deleteWaybill = async (req, res, next) => {
+    try {
+
+
+        let { id } = req.params;
+
+        let clientDetails = await dao.deleteSoft({ model: wayBills, params: { _id: id }, deletedBy: 'admin' });
+
+        if (!!clientDetails) {
+            return res.status(200).json({
+                success: true,
+                apiKey: "Waybill deleted successfully"
+            });
+
+        } else {
+            return res.status(400).json({
+                success: false,
+                message: "Invalid waybill id"
             });
         }
 
@@ -176,10 +236,10 @@ adminController.getPickups = async (req, res, next) => {
          * 
          */
         const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
-        limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
+            limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
 
         let allPickups = await dao.find({
-            model: pickups, params: {}, query:"clientId", skip: (page - 1) * limit,
+            model: pickups, params: {}, query: "clientId", skip: (page - 1) * limit,
             limit: limit
         });
         const totalCount = await dao.count({
@@ -256,6 +316,50 @@ adminController.addWayBill = async (req, res, next) => {
 
 };
 
+adminController.addWayBillSeries = async (req, res, next) => {
+    try {
+
+        
+
+        let { service, fromNumber, toNumber } = req.body;
+
+        let seriesStart = fromNumber.charAt(fromNumber.length - 1);
+        let seriesEnd = toNumber.charAt(toNumber.length - 1)
+
+        for (let i = 0; i < parseInt(seriesEnd) - parseInt(seriesStart); i++) {
+            let wayBillNumber = fromNumber + i;
+            let isBillExist = await dao.findOne({
+                model: wayBills, obj: {
+                    wayBill: wayBillNumber
+                }
+            });
+
+            if(isBillExist === null) {
+                await dao.create({
+                    model: wayBills, obj: {
+                        service,
+                        wayBill: wayBillNumber
+                    }
+                });
+            }
+         
+        }
+
+
+        return res.status(200).json({
+            success: true,
+            message: "Way bills added successfully"
+        });
+
+    }
+    catch (err) {
+        logger.error(err);
+        return next(boom.badImplementation(err));
+    }
+
+};
+
+
 adminController.fetchWayBills = async (req, res, next) => {
     try {
 
@@ -268,7 +372,7 @@ adminController.fetchWayBills = async (req, res, next) => {
         let { service, allotedUserId, allotedOrderId } = req.query;
 
         const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
-        limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
+            limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
         let params = {};
 
         if (!!service) {
@@ -283,13 +387,16 @@ adminController.fetchWayBills = async (req, res, next) => {
             params['allotedOrderId'] = allotedOrderId
         }
 
-        let wayBillsData = await dao.find({ model: wayBills, params,
+        let wayBillsData = await dao.find({
+            model: wayBills, params,
             skip: (page - 1) * limit,
-            limit: limit });
+            limit: limit
+        });
 
         const totalCount = await dao.count({
-            model: wayBills, params })
-            
+            model: wayBills, params
+        })
+
         return res.status(200).json({
             success: true,
             data: wayBillsData,
@@ -383,17 +490,19 @@ adminController.getAllUsers = async (req, res, next) => {
          */
 
         const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
-        limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
+            limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
 
 
-        let users = await dao.find({ model: clients, params:{}, skip: (page - 1) * limit,
-        limit: limit  });
+        let users = await dao.find({
+            model: clients, params: {}, skip: (page - 1) * limit,
+            limit: limit
+        });
 
         const totalCount = await dao.count({
-            model: clients, params:{}
-            
-         })
-            
+            model: clients, params: {}
+
+        })
+
         return res.status(200).json({
             success: true,
             data: users,
@@ -413,17 +522,17 @@ adminController.getOrders = async (req, res, next) => {
     try {
 
         const page = req.query.page && req.query.page > 0 ? parseInt(req.query.page) : 1,
-        limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
+            limit = req.query.limit && req.query.limit > 0 ? parseInt(req.query.limit) : 10;
 
 
         let allOrders = await dao.find({
             model: orders, params: {}, skip: (page - 1) * limit,
-            limit: limit 
+            limit: limit
         });
 
         const totalCount = await dao.count({
-            model: orders, params:{}
-            
+            model: orders, params: {}
+
         })
 
         return res.status(200).json({

@@ -3,7 +3,7 @@ const express    = require('express'),
       bodyParser = require('body-parser');
 
 
-      module.exports = function (app, config) {
+  module.exports = function (app, config) {
   let env = require('./env');//process.env.NODE_ENV || 'staging';
   app.locals.ENV = env;
   app.locals.env = env;

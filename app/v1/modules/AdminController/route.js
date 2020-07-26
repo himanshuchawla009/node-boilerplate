@@ -91,6 +91,13 @@ module.exports = function (router) {
 		controller.addWayBill
 	);
 
+	router.post('/admin/addWayBillSeries',
+		authenticateAdmin,
+		celebrate(validateSchema.addWayBillSeries),
+		controller.addWayBillSeries
+	);
+
+	
 	router.get('/admin/fetchPincodes',
 		authenticateAdmin,
 		controller.fetchPincodes
@@ -119,6 +126,17 @@ module.exports = function (router) {
 		authenticateAdmin,
 		controller.getShipmentSummary
 	);
+
+	router.delete('/admin/deleteClient',
+		authenticateAdmin,
+		controller.deleteClient
+	);
+
+	router.delete('/admin/deleteWaybill',
+		authenticateAdmin,
+		controller.deleteWaybill
+	);
+
 
 
 }
