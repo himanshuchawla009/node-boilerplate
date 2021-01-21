@@ -59,7 +59,7 @@
     "request-promise": "^4.2.5",
     "scrypt": "^6.0.3",
     "shelljs": "^0.8.3",
-    "socket.io": "^2.2.0",
+    "socket.io": "^2.4.0",
     "socket.io-stream": "^0.9.1",
     "speakeasy": "^2.0.0",
     "superagent": "^5.1.0",
